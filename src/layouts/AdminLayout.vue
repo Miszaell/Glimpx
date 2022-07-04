@@ -53,16 +53,23 @@
             </q-menu>
           </q-btn>
           <q-btn round dense flat color=" grey-8" icon="notifications">
-            <q-badge color="red" text-color="white" floating>
-              2
-            </q-badge>
+            <q-badge color="red" text-color="white" floating> 2 </q-badge>
             <q-tooltip>Notifications</q-tooltip>
           </q-btn>
           <q-btn round flat>
             <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
-            <q-tooltip>Account</q-tooltip>
+            <q-menu>
+              <q-list style="min-width: 100px">
+                <q-item clickable v-close-popup>
+                  <q-item-section>{{ username }}</q-item-section>
+                </q-item>
+                <q-item clickable v-close-popup @click="logoutRequest">
+                  <q-item-section>{{ $t('main.logout') }}</q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
           </q-btn>
         </div>
       </q-toolbar>
@@ -82,7 +89,9 @@
               <q-icon :name="link.icon" />
             </q-item-section>
             <q-item-section>
-              <q-item-label>{{ $t(`dashboard.menu.${link.text}`) }}</q-item-label>
+              <q-item-label>{{
+                  $t(`dashboard.menu.${link.text}`)
+              }}</q-item-label>
             </q-item-section>
           </q-item>
 
@@ -93,7 +102,9 @@
               <q-icon :name="link.icon" />
             </q-item-section>
             <q-item-section>
-              <q-item-label>{{ $t(`dashboard.menu.${link.text}`) }}</q-item-label>
+              <q-item-label>{{
+                  $t(`dashboard.menu.${link.text}`)
+              }}</q-item-label>
             </q-item-section>
           </q-item>
         </q-list>
@@ -107,18 +118,18 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-
+import { ref } from "vue";
+import { Notify } from "quasar";
 export default {
-  name: 'GooglePhotosLayout',
+  name: "GooglePhotosLayout",
 
   setup() {
-    const leftDrawerOpen = ref(false)
-    const search = ref('')
-    const storage = ref(0.26)
+    const leftDrawerOpen = ref(false);
+    const search = ref("");
+    const storage = ref(0.26);
 
     function toggleLeftDrawer() {
-      leftDrawerOpen.value = !leftDrawerOpen.value
+      leftDrawerOpen.value = !leftDrawerOpen.value;
     }
 
     return {
@@ -127,37 +138,67 @@ export default {
       storage,
 
       links1: [
-        { icon: 'people', text: 'users' },
-        { icon: 'inventory', text: 'stock' },
-        { icon: 'health_and_safety', text: 'hlPromotions' },
-        { icon: 'medication', text: 'consult' },
+        { icon: "people", text: "users" },
+        { icon: "inventory", text: "stock" },
+        { icon: "health_and_safety", text: "hlPromotions" },
+        { icon: "medication", text: "consult" },
       ],
       links2: [
-        { icon: 'settings', text: 'settings' },
-        { icon: 'security', text: 'roles' },
+        { icon: "settings", text: "settings" },
+        { icon: "security", text: "roles" },
       ],
       createMenu: [
-        { icon: 'photo_album', text: 'Album' },
-        { icon: 'people', text: 'Shared Album' },
-        { icon: 'movie', text: 'Movie' },
-        { icon: 'library_books', text: 'Animation' },
-        { icon: 'dashboard', text: 'Collage' },
-        { icon: 'book', text: 'Photo book' }
+        { icon: "photo_album", text: "Album" },
+        { icon: "people", text: "Shared Album" },
+        { icon: "movie", text: "Movie" },
+        { icon: "library_books", text: "Animation" },
+        { icon: "dashboard", text: "Collage" },
+        { icon: "book", text: "Photo book" },
       ],
 
-      toggleLeftDrawer
-    }
+      toggleLeftDrawer,
+    };
   },
 
+  data() {
+    return {
+      username: null,
+    }
+  },
+  created() {
+    let user = JSON.parse(sessionStorage.getItem("user"))
+    if (user) {
+      this.username = user.email
+    }
+  },
   methods: {
     setLanguage(locale) {
-      this.$root.$i18n.locale = locale
+      this.$root.$i18n.locale = locale;
     },
     currentLanguage() {
-      return this.$i18n.locale === 'es-MX' ? 'en-US' : this.$i18n.locale
+      return this.$i18n.locale === "es-MX" ? "en-US" : this.$i18n.locale;
     },
-  }
-}
+
+    logoutRequest() {
+      let formData = new FormData
+      formData.append("token", sessionStorage.getItem("token"))
+      this.$api.post("logout/", formData)
+        .then((response) => {
+          if (response.status === 200) {
+            sessionStorage.clear()
+            Notify.create({
+              type: "positive",
+              message: this.$t('main.grant'),
+            });
+            this.$router.push("auth")
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+};
 </script>
 
 <style lang="sass">

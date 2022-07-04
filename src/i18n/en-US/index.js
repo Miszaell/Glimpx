@@ -5,6 +5,13 @@ export default {
   main: {
     translate: "Translate ES",
     appTitle: "Glimpx eng",
+    login: "Login",
+    logout: "Logout",
+    signUp: "Sign up",
+    grant: "Welcome",
+  },
+  buttons: {
+    btnAuth: "Next",
   },
   dashboard: {
     menu: {

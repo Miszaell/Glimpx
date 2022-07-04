@@ -2,6 +2,13 @@ export default {
   main: {
     translate: "Traducir EN",
     appTitle: "Glimpx esp",
+    login: "Iniciar sesión",
+    logout: "Cerrar sesión",
+    signUp: "Registrarse",
+    grant: "Bienvenido",
+  },
+  buttons: {
+    btnAuth: "Continuar",
   },
   dashboard: {
     menu: {

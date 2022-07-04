@@ -1,1 +1,14 @@
-{"version":"0.0.1","name":"glimpx-front","dependencies":{"@quasar/extras":{"version":"1.14.2"},"axios":{"version":"0.21.4"},"core-js":{"version":"3.23.3"},"pinia":{"version":"2.0.14"},"quasar":{"version":"2.7.4"},"vue-i18n":{"version":"9.1.10"},"vue-router":{"version":"4.0.16"},"vue":{"version":"3.2.37"}}}
+{
+  "version": "0.0.1",
+  "name": "glimpx-front",
+  "dependencies": {
+    "@quasar/extras": { "version": "1.14.2" },
+    "axios": { "version": "0.21.4" },
+    "core-js": { "version": "3.23.3" },
+    "pinia": { "version": "2.0.14" },
+    "quasar": { "version": "2.7.4" },
+    "vue-i18n": { "version": "9.1.10" },
+    "vue-router": { "version": "4.0.16" },
+    "vue": { "version": "3.2.37" }
+  }
+}

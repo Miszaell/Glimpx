@@ -2,7 +2,8 @@
   <q-layout view="lHh Lpr fff" class="bg-grey-1">
     <q-header elevated class="bg-white text-grey-8" height-hint="64">
       <q-toolbar class="GPL__toolbar" style="height: 64px">
-        <q-toolbar-title v-if="$q.screen.gt.sm" shrink class="row items-center no-wrap">
+        <q-toolbar-title v-if="$q.screen.gt.sm" shrink class="row items-center no-wrap cursor-pointer"
+          @click="$router.push('/')">
           <span class="q-ml-sm">{{ $t("main.appTitle") }}</span>
         </q-toolbar-title>
 
@@ -52,80 +53,49 @@
               </q-list>
             </q-menu>
           </q-btn>
-          <q-btn round flat icon="login" to="auth">
-            <q-tooltip>Login</q-tooltip>
-          </q-btn>
-          <q-btn round flat>
-            <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-            </q-avatar>
-            <q-tooltip>Account</q-tooltip>
-          </q-btn>
         </div>
       </q-toolbar>
     </q-header>
     <q-page-container class="GPL__page-container">
-      <router-view />
+      <div class="flex flex-center q-mt-xl">
+        <div style="min-width: 600px">
+          <q-tabs v-model="tab" align="justify" narrow-indicator class="q-mb-lg">
+            <q-tab class="text-purple" name="sign_in" :label="$t('main.login')" />
+            <q-tab class="text-orange" name="sign_up" :label="$t('main.signUp')" />
+          </q-tabs>
+
+          <div class="q-gutter-y-sm">
+            <q-tab-panels v-model="tab" animated transition-prev="scale" transition-next="scale" class="text-center">
+              <q-tab-panel name="sign_in">
+                <sign-in />
+              </q-tab-panel>
+
+              <q-tab-panel name="sign_up">
+                <sign-up />
+              </q-tab-panel>
+            </q-tab-panels>
+          </div>
+        </div>
+      </div>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { ref } from "vue";
-const stringOptions = ["hlPromotions"];
+import { ref } from 'vue'
+import SignIn from 'src/components/SignIn.vue'
+import SignUp from 'src/components/SignUp.vue'
 export default {
-  name: "GooglePhotosLayout",
-
-  setup() {
-    const storage = ref(0.26);
-    const text = ref("");
-    const options = ref(null);
-    const filteredOptions = ref([]);
-    const search = ref(null); // $refs.search
-
-    function filter(val, update) {
-      if (options.value === null) {
-        // load data
-        setTimeout(() => {
-          options.value = stringOptions;
-          search.value.filter("");
-        }, 1000);
-        update();
-        return;
-      }
-      if (val === "") {
-        update(() => {
-          filteredOptions.value = options.value.map((op) => ({ label: op }));
-        });
-        return;
-      }
-      update(() => {
-        filteredOptions.value = [
-          {
-            label: val,
-            type: "In this repository",
-          },
-          {
-            label: val,
-            type: "All GitHub",
-          },
-          ...options.value
-            .filter((op) => op.toLowerCase().includes(val.toLowerCase()))
-            .map((op) => ({ label: op })),
-        ];
-      });
-    }
-
-    return {
-      text,
-      options,
-      filteredOptions,
-      search,
-      filter,
-      storage,
-    };
+  name: "AuthPage",
+  components: {
+    SignIn,
+    SignUp
   },
-
+  setup() {
+    return {
+      tab: ref('sign_in')
+    }
+  },
   methods: {
     setLanguage(locale) {
       this.$root.$i18n.locale = locale;
@@ -133,50 +103,6 @@ export default {
     currentLanguage() {
       return this.$i18n.locale === "es-MX" ? "en-US" : this.$i18n.locale;
     },
-  },
-};
+  }
+}
 </script>
-
-<style lang="sass">
-.GPL
-
-  &__toolbar
-    height: 64px
-
-  &__toolbar-input
-    width: 35%
-
-  &__drawer-item
-    line-height: 24px
-    border-radius: 0 24px 24px 0
-    margin-right: 12px
-
-    .q-item__section--avatar
-      padding-left: 12px
-      .q-icon
-        color: #5f6368
-
-    .q-item__label:not(.q-item__label--caption)
-      color: #3c4043
-      letter-spacing: .01785714em
-      font-size: .875rem
-      font-weight: 500
-      line-height: 1.25rem
-
-    &--storage
-      border-radius: 0
-      margin-right: 0
-      padding-top: 24px
-      padding-bottom: 24px
-
-  &__side-btn
-    &__label
-      font-size: 12px
-      line-height: 24px
-      letter-spacing: .01785714em
-      font-weight: 500
-
-  @media (min-width: 1024px)
-    &__page-container
-      padding-left: 94px
-</style>
