@@ -10,7 +10,13 @@ class UserTokenSerializer(serializers.ModelSerializer):
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('username','email','name','last_name')
+        fields = ('username','email', 'password','name','last_name')
+        
+    def create(self, validated_data):
+        user = User(**validated_data)
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

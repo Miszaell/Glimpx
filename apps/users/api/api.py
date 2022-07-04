@@ -7,14 +7,14 @@ from rest_framework import viewsets
 
 from apps.users.models import User
 from apps.users.api.serializers import (
-    UserSerializer, UserListSerializer, UpdateUserSerializer,
+    CustomUserSerializer, UserListSerializer, UpdateUserSerializer,
     PasswordSerializer
 )
 
 
-class UserViewSet(Authentication,viewsets.GenericViewSet):
+class UserViewSet(viewsets.GenericViewSet):
     model = User
-    serializer_class = UserSerializer
+    serializer_class = CustomUserSerializer
     list_serializer_class = UserListSerializer
     queryset = None
 

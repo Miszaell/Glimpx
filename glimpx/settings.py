@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ufdo8wuaer^mkg(2mlj0nx*g^&px=-0#%+^j9gb2od1qt^trh^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'http://localhost:8080']
 
 ADMINS = [('Misael', 'misaelvgm011@gmail.com')]
 # Application definition
@@ -47,7 +47,7 @@ LOCAL_APPS = [
 ]
 
 THIRD_APPS = [
-    # 'corsheaders',
+    'corsheaders',
     # 'automatic_crud',
     'rest_framework',
     'rest_framework.authtoken',
@@ -62,6 +62,7 @@ TOKEN_EXPIRED_AFTER_SECONDS=900
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -148,6 +149,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8000",
+    "http://localhost:8080"
+]
 
 LOGGING = {
     'version': 1,

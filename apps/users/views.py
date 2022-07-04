@@ -18,7 +18,7 @@ class UserToken(APIView):
                 'token': user_token.key
             })
         except:
-            return Response({'error': 'Credenciales enviadas incorrectas.'},status = status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'The credentials received are incorrect.'},status = status.HTTP_400_BAD_REQUEST)
                             
 class Login(ObtainAuthToken):
     
@@ -48,9 +48,9 @@ class Login(ObtainAuthToken):
                         'user': user_serializaer.data
                     }, status=status.HTTP_201_CREATED)
             else:
-                return Response({'error':'este usuario está desactivado'}, status = status.HTTP_401_UNAUTHORIZED)
+                return Response({'error':'This user is disabled'}, status = status.HTTP_401_UNAUTHORIZED)
         else:
-            return Response({'error': 'usuario o contraseña invalido'}, status = status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'Invalid username or password'}, status = status.HTTP_400_BAD_REQUEST)
 
 class Logout(APIView):
     def post(self, request, *args, **kwargs):
@@ -68,11 +68,11 @@ class Logout(APIView):
                         if user.id == int(session_data.get('_auth_user_id')):
                             session.delete()
                 token.delete()
-                return Response({'token_message': 'Token eliminado.', 'session_message': 'Sesiones de usuario eliminadas.'},
+                return Response({'token_message': 'Deleted token.', 'session_message': 'Deleted user sessions.'},
                                 status=status.HTTP_200_OK)
 
-            return Response({'error': 'No se ha encontrado un usuario con estas credenciales.'},
+            return Response({'error': 'A user with these credentials was not found.'},
                             status=status.HTTP_400_BAD_REQUEST)
         except:
-            return Response({'error': 'No se ha encontrado token en la petición.'},
+            return Response({'error': 'No token found in request.'},
                             status=status.HTTP_409_CONFLICT)

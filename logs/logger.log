@@ -301,3 +301,121 @@ WARNING 2022-07-03 20:29:45,950 basehttp 29843 123145481371648 "GET /users/ HTTP
 INFO 2022-07-03 20:30:13,031 basehttp 29843 123145481371648 "POST / HTTP/1.1" 201 161
 WARNING 2022-07-03 20:30:36,071 basehttp 29843 123145481371648 "GET /users/ HTTP/1.1" 400 63
 INFO 2022-07-03 20:31:06,275 basehttp 29843 123145481371648 "GET /users/ HTTP/1.1" 200 78
+INFO 2022-07-03 20:33:43,962 autoreload 29993 4639944192 Watching for file changes with StatReloader
+INFO 2022-07-03 20:33:46,990 basehttp 29993 123145408307200 "POST /admin/login/?next=/admin/authtoken/tokenproxy/ HTTP/1.1" 302 0
+INFO 2022-07-03 20:33:47,246 basehttp 29993 123145408307200 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 6360
+INFO 2022-07-03 20:33:56,251 basehttp 29993 123145408307200 "GET /admin/authtoken/tokenproxy/1/change/ HTTP/1.1" 200 7016
+INFO 2022-07-03 20:33:56,405 basehttp 29993 123145408307200 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-03 20:34:03,335 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 200 78
+INFO 2022-07-03 20:34:05,098 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 200 78
+WARNING 2022-07-03 20:34:10,214 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 400 43
+INFO 2022-07-03 20:34:15,983 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 200 78
+INFO 2022-07-03 20:34:18,800 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 200 78
+WARNING 2022-07-03 20:34:44,868 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 400 43
+INFO 2022-07-03 20:34:51,638 basehttp 29993 123145441886208 "GET /users/ HTTP/1.1" 200 78
+INFO 2022-07-03 21:13:53,049 autoreload 29993 4639944192 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/views.py changed, reloading.
+INFO 2022-07-03 21:13:55,639 autoreload 30363 4600184320 Watching for file changes with StatReloader
+WARNING 2022-07-03 21:16:58,526 basehttp 30363 123145370411008 "GET /users/ HTTP/1.1" 400 62
+WARNING 2022-07-03 21:59:44,543 basehttp 30363 123145387200512 "GET / HTTP/1.1" 405 42
+INFO 2022-07-03 21:59:45,544 basehttp 30363 123145387200512 "GET /admin/ HTTP/1.1" 200 4983
+INFO 2022-07-03 21:59:48,334 basehttp 30363 123145387200512 "GET /admin/users/user/ HTTP/1.1" 200 6485
+INFO 2022-07-03 21:59:48,560 basehttp 30363 123145387200512 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-03 21:59:48,827 basehttp 30363 123145387200512 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-03 21:59:53,812 basehttp 30363 123145387200512 "GET /admin/users/user/ HTTP/1.1" 200 6485
+INFO 2022-07-03 21:59:53,945 basehttp 30363 123145387200512 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-03 21:59:56,150 basehttp 30363 123145387200512 "GET /admin/ HTTP/1.1" 200 4983
+INFO 2022-07-03 21:59:58,125 basehttp 30363 123145387200512 "GET /admin/logout/ HTTP/1.1" 200 1570
+WARNING 2022-07-03 22:00:03,575 basehttp 30363 123145387200512 "GET /users/ HTTP/1.1" 400 63
+INFO 2022-07-03 22:01:11,581 autoreload 30363 4600184320 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/api.py changed, reloading.
+INFO 2022-07-03 22:01:13,938 autoreload 31611 4357385728 Watching for file changes with StatReloader
+INFO 2022-07-03 22:01:15,039 basehttp 31611 123145557446656 "GET /users/ HTTP/1.1" 200 21024
+INFO 2022-07-03 22:01:15,323 basehttp 31611 123145574236160 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,324 basehttp 31611 123145557446656 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,325 basehttp 31611 123145591025664 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,373 basehttp 31611 123145574236160 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,374 basehttp 31611 123145641394176 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,376 basehttp 31611 123145607815168 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,376 basehttp 31611 123145591025664 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,377 basehttp 31611 123145624604672 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,377 basehttp 31611 123145557446656 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,383 basehttp 31611 123145574236160 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,494 basehttp 31611 123145574236160 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,498 basehttp 31611 123145624604672 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,498 basehttp 31611 123145607815168 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,501 basehttp 31611 123145557446656 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,501 basehttp 31611 123145591025664 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,502 basehttp 31611 123145574236160 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-03 22:01:15,826 basehttp 31611 123145574236160 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2022-07-03 22:02:54,389 basehttp 31611 123145574236160 "POST /users/ HTTP/1.1" 400 20927
+WARNING 2022-07-03 22:03:48,634 basehttp 31611 123145574236160 "POST /users/ HTTP/1.1" 400 20927
+WARNING 2022-07-03 22:04:39,905 basehttp 31611 123145574236160 "POST /users/ HTTP/1.1" 400 21199
+WARNING 2022-07-03 22:05:25,772 basehttp 31611 123145574236160 "POST /users/ HTTP/1.1" 400 20927
+INFO 2022-07-03 22:05:42,246 basehttp 31611 123145574236160 "POST /users/ HTTP/1.1" 201 20861
+INFO 2022-07-03 22:05:47,157 basehttp 31611 123145574236160 "GET /users/ HTTP/1.1" 200 21243
+INFO 2022-07-03 22:12:48,196 basehttp 31611 123145557446656 code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2022-07-03 22:12:48,199 basehttp 31611 123145557446656 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:12:48,203 basehttp 31611 123145557446656 code 400, message Bad request version ('\x8f´$\x9fÞz¥\x16é7\x84½\x93¦§>¯OC\x8fÆÙô¦ÃÝ£:®¡ûo\x00')
+ERROR 2022-07-03 22:12:48,203 basehttp 31611 123145557446656 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:13:45,009 basehttp 31611 123145557446656 code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2022-07-03 22:13:45,010 basehttp 31611 123145557446656 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:13:45,011 basehttp 31611 123145557446656 code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x15Ù>®GÉ\x02ëËÏjã\x90')
+ERROR 2022-07-03 22:13:45,011 basehttp 31611 123145557446656 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:15:03,236 autoreload 31611 4357385728 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-03 22:15:06,104 autoreload 31864 4503064064 Watching for file changes with StatReloader
+INFO 2022-07-03 22:15:12,560 basehttp 31864 123145504079872 code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2022-07-03 22:15:12,561 basehttp 31864 123145504079872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:15:12,561 basehttp 31864 123145504079872 code 400, message Bad request version ('\x15Ä\x079Ô\x1bú')
+ERROR 2022-07-03 22:15:12,562 basehttp 31864 123145504079872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:15:59,015 basehttp 31864 123145504079872 code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2022-07-03 22:15:59,016 basehttp 31864 123145504079872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2022-07-03 22:15:59,017 basehttp 31864 123145504079872 code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+ERROR 2022-07-03 22:15:59,017 basehttp 31864 123145504079872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2022-07-03 22:16:26,823 basehttp 31864 123145504079872 "POST /users/ HTTP/1.1" 400 168
+INFO 2022-07-03 22:17:10,316 autoreload 31864 4503064064 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-03 22:17:12,803 autoreload 31925 4462296576 Watching for file changes with StatReloader
+WARNING 2022-07-03 22:17:16,337 basehttp 31925 123145588760576 "POST /users/ HTTP/1.1" 400 168
+WARNING 2022-07-03 22:17:20,683 basehttp 31925 123145588760576 "POST /users/ HTTP/1.1" 400 168
+INFO 2022-07-03 22:18:59,265 autoreload 31925 4462296576 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/api.py changed, reloading.
+INFO 2022-07-03 22:19:01,613 autoreload 32142 4637470208 Watching for file changes with StatReloader
+WARNING 2022-07-03 22:19:08,370 basehttp 32142 123145600647168 "POST /users/ HTTP/1.1" 400 168
+INFO 2022-07-03 22:19:41,137 autoreload 32142 4637470208 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/api.py changed, reloading.
+INFO 2022-07-03 22:19:43,074 autoreload 32165 4379770368 Watching for file changes with StatReloader
+INFO 2022-07-03 22:19:57,948 autoreload 32165 4379770368 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-03 22:19:59,463 autoreload 32215 4546084352 Watching for file changes with StatReloader
+WARNING 2022-07-03 22:20:03,438 basehttp 32215 123145390968832 "POST /users/ HTTP/1.1" 400 168
+WARNING 2022-07-03 22:24:09,950 basehttp 32215 123145390968832 "POST /users/ HTTP/1.1" 400 168
+INFO 2022-07-03 22:27:38,547 autoreload 32215 4546084352 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-03 22:27:40,832 autoreload 32344 4706053632 Watching for file changes with StatReloader
+INFO 2022-07-03 22:28:52,203 autoreload 32344 4706053632 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-03 22:28:54,583 autoreload 32388 4442050048 Watching for file changes with StatReloader
+WARNING 2022-07-03 22:29:26,398 basehttp 32388 123145351847936 "POST /users/ HTTP/1.1" 400 168
+ERROR 2022-07-03 22:36:53,732 basehttp 32388 123145351847936 "POST /users/ HTTP/1.1" 500 115110
+ERROR 2022-07-03 23:32:20,338 basehttp 32388 123145351847936 "POST /users/ HTTP/1.1" 500 115086
+INFO 2022-07-03 23:33:42,637 autoreload 32388 4442050048 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/serializers.py changed, reloading.
+INFO 2022-07-03 23:33:44,481 autoreload 33032 4580941312 Watching for file changes with StatReloader
+INFO 2022-07-03 23:34:05,498 autoreload 33032 4580941312 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/api.py changed, reloading.
+INFO 2022-07-03 23:34:07,355 autoreload 33068 4725308928 Watching for file changes with StatReloader
+ERROR 2022-07-03 23:34:20,692 basehttp 33068 123145593970688 "POST /users/ HTTP/1.1" 500 100594
+INFO 2022-07-03 23:35:05,364 autoreload 33068 4725308928 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/users/api/serializers.py changed, reloading.
+INFO 2022-07-03 23:35:08,431 autoreload 33095 4477591040 Watching for file changes with StatReloader
+INFO 2022-07-03 23:35:12,272 basehttp 33095 123145372979200 "POST /users/ HTTP/1.1" 201 47
+INFO 2022-07-03 23:35:37,480 autoreload 33095 4477591040 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-03 23:35:40,410 autoreload 33127 4586307072 Watching for file changes with StatReloader
+INFO 2022-07-03 23:38:20,811 basehttp 33127 123145456869376 "POST /login/ HTTP/1.1" 201 132
+INFO 2022-07-03 23:44:56,763 basehttp 33127 123145456869376 "POST /login/ HTTP/1.1" 201 132
+INFO 2022-07-03 23:45:32,634 basehttp 33127 123145456869376 "POST /login/ HTTP/1.1" 201 132
+INFO 2022-07-03 23:46:19,268 basehttp 33127 123145456869376 "POST /login/ HTTP/1.1" 201 132
+WARNING 2022-07-03 23:56:06,954 basehttp 33127 123145456869376 "POST /logout/ HTTP/1.1" 400 56
+INFO 2022-07-03 23:59:01,184 basehttp 33127 123145473658880 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 00:05:51,055 basehttp 33127 123145473658880 "POST /login/ HTTP/1.1" 201 132
+INFO 2022-07-04 00:06:00,218 basehttp 33127 123145473658880 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 00:16:48,388 basehttp 33127 123145473658880 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-04 00:17:31,346 basehttp 33127 123145473658880 "POST /logout/ HTTP/1.1" 200 77
