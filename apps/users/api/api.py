@@ -36,10 +36,10 @@ class UserViewSet(viewsets.GenericViewSet):
             user.set_password(password_serializer.validated_data['password'])
             user.save()
             return Response({
-                'message': 'Contraseña actualizada correctamente'
+                'message': 'Password updated successfully'
             })
         return Response({
-            'message': 'Hay errores en la información enviada',
+            'message': 'There are errors in the information received',
             'errors': password_serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
@@ -53,10 +53,10 @@ class UserViewSet(viewsets.GenericViewSet):
         if user_serializer.is_valid():
             user_serializer.save()
             return Response({
-                'message': 'Usuario registrado correctamente.'
+                'message': 'Successfully registered user.'
             }, status=status.HTTP_201_CREATED)
         return Response({
-            'message': 'Hay errores en el registro',
+            'message': 'There are errors in the registry',
             'errors': user_serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
@@ -71,10 +71,10 @@ class UserViewSet(viewsets.GenericViewSet):
         if user_serializer.is_valid():
             user_serializer.save()
             return Response({
-                'message': 'Usuario actualizado correctamente'
+                'message': 'Successfully registered user'
             }, status=status.HTTP_200_OK)
         return Response({
-            'message': 'Hay errores en la actualización',
+            'message': 'There are errors in the update',
             'errors': user_serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
@@ -82,8 +82,8 @@ class UserViewSet(viewsets.GenericViewSet):
         user_destroy = self.model.objects.filter(id=pk).update(is_active=False)
         if user_destroy == 1:
             return Response({
-                'message': 'Usuario eliminado correctamente'
+                'message': 'Successfully deleted user'
             })
         return Response({
-            'message': 'No existe el usuario que desea eliminar'
+            'message': 'The user you want to delete does not exist'
         }, status=status.HTTP_404_NOT_FOUND)

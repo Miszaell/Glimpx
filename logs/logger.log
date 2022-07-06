@@ -419,3 +419,293 @@ INFO 2022-07-04 00:05:51,055 basehttp 33127 123145473658880 "POST /login/ HTTP/1
 INFO 2022-07-04 00:06:00,218 basehttp 33127 123145473658880 "POST /logout/ HTTP/1.1" 200 77
 INFO 2022-07-04 00:16:48,388 basehttp 33127 123145473658880 "POST /login/ HTTP/1.1" 201 161
 INFO 2022-07-04 00:17:31,346 basehttp 33127 123145473658880 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 16:11:08,545 autoreload 36155 4503006720 Watching for file changes with StatReloader
+INFO 2022-07-04 16:11:43,423 basehttp 36155 123145566445568 "POST /login/ HTTP/1.1" 201 132
+INFO 2022-07-04 16:13:25,721 basehttp 36155 123145566445568 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 16:13:43,352 basehttp 36155 123145566445568 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-04 16:13:57,812 basehttp 36155 123145566445568 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 16:14:30,177 basehttp 36155 123145566445568 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-04 16:14:43,745 basehttp 36155 123145566445568 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-04 16:16:50,170 basehttp 36155 123145566445568 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-04 16:51:00,804 autoreload 37155 4695920128 Watching for file changes with StatReloader
+INFO 2022-07-04 16:51:10,366 basehttp 37155 123145388384256 "GET /admin/ HTTP/1.1" 302 0
+INFO 2022-07-04 16:51:10,467 basehttp 37155 123145405173760 "GET /admin/ HTTP/1.1" 302 0
+INFO 2022-07-04 16:51:10,701 basehttp 37155 123145388384256 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2257
+INFO 2022-07-04 16:51:10,731 basehttp 37155 123145405173760 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2257
+WARNING 2022-07-04 16:51:11,575 basehttp 37155 123145405173760 "GET /favicon.ico HTTP/1.1" 404 2594
+INFO 2022-07-04 16:51:17,632 basehttp 37155 123145405173760 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2022-07-04 16:51:17,681 basehttp 37155 123145405173760 "GET /admin/ HTTP/1.1" 200 6533
+INFO 2022-07-04 16:51:22,323 basehttp 37155 123145405173760 "GET /admin/products/material/ HTTP/1.1" 200 6455
+INFO 2022-07-04 16:51:22,540 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:22,680 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:26,533 basehttp 37155 123145405173760 "GET /admin/products/material/add/ HTTP/1.1" 200 8593
+INFO 2022-07-04 16:51:26,680 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:43,044 basehttp 37155 123145405173760 "POST /admin/products/material/add/ HTTP/1.1" 302 0
+INFO 2022-07-04 16:51:43,106 basehttp 37155 123145405173760 "GET /admin/products/material/ HTTP/1.1" 200 7870
+INFO 2022-07-04 16:51:43,299 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:43,485 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:46,589 basehttp 37155 123145405173760 "GET /admin/products/medicine/ HTTP/1.1" 200 6455
+INFO 2022-07-04 16:51:46,667 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:50,387 basehttp 37155 123145405173760 "GET /admin/products/stock/ HTTP/1.1" 200 6434
+INFO 2022-07-04 16:51:50,491 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:50,529 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:51:53,779 basehttp 37155 123145405173760 "GET /admin/products/medicine/ HTTP/1.1" 200 6455
+INFO 2022-07-04 16:51:53,860 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:52:02,226 basehttp 37155 123145405173760 "GET /admin/products/medicine/add/ HTTP/1.1" 200 11414
+INFO 2022-07-04 16:52:02,296 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:52:02,325 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:52:40,554 basehttp 37155 123145405173760 "POST /admin/products/medicine/add/ HTTP/1.1" 302 0
+INFO 2022-07-04 16:52:40,615 basehttp 37155 123145405173760 "GET /admin/products/medicine/ HTTP/1.1" 200 7870
+INFO 2022-07-04 16:52:40,769 basehttp 37155 123145405173760 "GET /admin/jsi18n/ HTTP/1.1" 200 8435
+INFO 2022-07-04 16:52:45,296 basehttp 37155 123145405173760 "GET /admin/logout/ HTTP/1.1" 200 1570
+INFO 2022-07-04 17:11:13,275 autoreload 37155 4695920128 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-04 17:11:14,732 autoreload 38106 4637728256 Watching for file changes with StatReloader
+INFO 2022-07-04 17:11:30,431 autoreload 38122 4574432768 Watching for file changes with StatReloader
+INFO 2022-07-04 17:12:05,022 basehttp 38122 123145463562240 "GET /materials HTTP/1.1" 301 0
+INFO 2022-07-04 17:12:05,213 basehttp 38122 123145463562240 "GET /materials/ HTTP/1.1" 200 14996
+INFO 2022-07-04 17:12:05,313 basehttp 38122 123145480351744 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,316 basehttp 38122 123145480351744 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,317 basehttp 38122 123145513930752 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,319 basehttp 38122 123145497141248 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,325 basehttp 38122 123145497141248 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,326 basehttp 38122 123145480351744 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,326 basehttp 38122 123145513930752 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,327 basehttp 38122 123145530720256 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,327 basehttp 38122 123145547509760 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,337 basehttp 38122 123145463562240 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,364 basehttp 38122 123145463562240 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,377 basehttp 38122 123145530720256 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,377 basehttp 38122 123145480351744 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,378 basehttp 38122 123145547509760 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,378 basehttp 38122 123145513930752 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,385 basehttp 38122 123145463562240 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:05,660 basehttp 38122 123145463562240 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2022-07-04 17:12:36,473 autoreload 38122 4574432768 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/routers.py changed, reloading.
+INFO 2022-07-04 17:12:38,407 autoreload 38150 4560399872 Watching for file changes with StatReloader
+INFO 2022-07-04 17:12:40,402 basehttp 38150 123145372045312 "GET /materials/ HTTP/1.1" 200 13168
+INFO 2022-07-04 17:12:50,878 basehttp 38150 123145372045312 "GET /materials/ HTTP/1.1" 200 13168
+INFO 2022-07-04 17:12:56,492 basehttp 38150 123145372045312 "GET /materials/1 HTTP/1.1" 301 0
+INFO 2022-07-04 17:12:56,563 basehttp 38150 123145372045312 "GET /materials/1/ HTTP/1.1" 200 14055
+INFO 2022-07-04 17:16:02,510 autoreload 38150 4560399872 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-04 17:16:04,027 autoreload 38304 4583063040 Watching for file changes with StatReloader
+INFO 2022-07-04 17:16:11,383 autoreload 38304 4583063040 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-04 17:16:12,464 autoreload 38345 4473228800 Watching for file changes with StatReloader
+INFO 2022-07-04 17:17:17,255 basehttp 38345 123145573462016 "GET /materials/?format=json HTTP/1.1" 200 72
+WARNING 2022-07-04 17:19:00,855 basehttp 38345 123145573462016 "GET / HTTP/1.1" 404 2653
+INFO 2022-07-04 17:19:09,192 basehttp 38345 123145573462016 "GET /materials/ HTTP/1.1" 200 13168
+ERROR 2022-07-04 17:19:45,870 basehttp 38345 123145573462016 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,103 basehttp 38345 123145590251520 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,187 basehttp 38345 123145607041024 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,273 basehttp 38345 123145623830528 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,385 basehttp 38345 123145640620032 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,438 basehttp 38345 123145657409536 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,649 basehttp 38345 123145573462016 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,734 basehttp 38345 123145590251520 "POST /materials/ HTTP/1.1" 500 172712
+ERROR 2022-07-04 17:19:46,762 basehttp 38345 123145607041024 "POST /materials/ HTTP/1.1" 500 172722
+INFO 2022-07-04 17:21:15,998 autoreload 38345 4473228800 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-04 17:21:18,600 autoreload 38435 4556242432 Watching for file changes with StatReloader
+INFO 2022-07-04 17:21:20,835 basehttp 38435 123145384620032 "GET /materials/ HTTP/1.1" 200 13168
+INFO 2022-07-04 17:21:29,510 basehttp 38435 123145384620032 - Broken pipe from ('127.0.0.1', 55456)
+
+ERROR 2022-07-04 17:21:52,600 basehttp 38435 123145401409536 "POST /materials/ HTTP/1.1" 500 172782
+INFO 2022-07-04 17:22:38,747 basehttp 38435 123145401409536 "GET /materials/1/ HTTP/1.1" 200 14055
+INFO 2022-07-04 17:41:13,331 autoreload 38585 4398652928 Watching for file changes with StatReloader
+WARNING 2022-07-04 17:43:36,301 basehttp 38585 123145391755264 "POST /login/ HTTP/1.1" 400 40
+INFO 2022-07-04 17:44:49,856 basehttp 38585 123145391755264 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-05 11:29:51,298 autoreload 40789 4532694528 Watching for file changes with StatReloader
+INFO 2022-07-05 11:30:36,697 basehttp 40789 123145466105856 "POST /login/ HTTP/1.1" 201 161
+INFO 2022-07-06 11:47:44,405 autoreload 43973 4566789632 Watching for file changes with StatReloader
+INFO 2022-07-06 11:47:56,749 autoreload 43973 4566789632 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 11:47:58,376 autoreload 43986 4708855296 Watching for file changes with StatReloader
+WARNING 2022-07-06 11:48:07,189 basehttp 43986 123145517559808 "GET / HTTP/1.1" 404 2653
+WARNING 2022-07-06 11:48:07,751 basehttp 43986 123145517559808 "GET /favicon.ico HTTP/1.1" 404 2704
+ERROR 2022-07-06 11:48:17,004 basehttp 43986 123145517559808 "GET /materials/ HTTP/1.1" 500 91720
+INFO 2022-07-06 11:48:57,436 autoreload 43986 4708855296 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:48:58,805 autoreload 44024 4605091328 Watching for file changes with StatReloader
+INFO 2022-07-06 11:49:00,649 basehttp 44024 123145349533696 "GET /materials/ HTTP/1.1" 200 12983
+INFO 2022-07-06 11:49:00,736 basehttp 44024 123145366323200 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,751 basehttp 44024 123145383112704 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,754 basehttp 44024 123145399902208 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,756 basehttp 44024 123145399902208 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,759 basehttp 44024 123145399902208 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,761 basehttp 44024 123145383112704 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,764 basehttp 44024 123145433481216 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,766 basehttp 44024 123145349533696 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2022-07-06 11:49:00,768 basehttp 44024 123145366323200 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2022-07-06 11:49:00,771 basehttp 44024 123145416691712 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,777 basehttp 44024 123145366323200 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,783 basehttp 44024 123145349533696 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,787 basehttp 44024 123145366323200 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,797 basehttp 44024 123145349533696 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2022-07-06 11:49:00,799 basehttp 44024 123145366323200 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,923 basehttp 44024 123145349533696 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2022-07-06 11:49:00,994 basehttp 44024 123145349533696 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2022-07-06 11:51:44,931 autoreload 44024 4605091328 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:51:46,041 autoreload 44078 4716318208 Watching for file changes with StatReloader
+INFO 2022-07-06 11:51:51,666 basehttp 44078 123145373995008 "GET /materials/ HTTP/1.1" 200 12983
+INFO 2022-07-06 11:52:22,743 autoreload 44078 4716318208 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:52:24,844 autoreload 44103 4536118784 Watching for file changes with StatReloader
+ERROR 2022-07-06 11:52:35,698 basehttp 44103 123145450799104 "GET /materials/ HTTP/1.1" 500 145229
+INFO 2022-07-06 11:53:07,395 autoreload 44103 4536118784 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 11:53:09,790 autoreload 44130 4541922816 Watching for file changes with StatReloader
+INFO 2022-07-06 11:53:13,044 autoreload 44130 4541922816 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:53:14,594 autoreload 44153 4566498816 Watching for file changes with StatReloader
+INFO 2022-07-06 11:53:16,925 basehttp 44153 123145392656384 "GET /materials/ HTTP/1.1" 200 12983
+INFO 2022-07-06 11:56:56,785 autoreload 44153 4566498816 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:56:59,281 autoreload 44255 4555812352 Watching for file changes with StatReloader
+INFO 2022-07-06 11:57:01,669 basehttp 44255 123145447337984 "GET /materials/ HTTP/1.1" 200 12887
+INFO 2022-07-06 11:57:28,708 autoreload 44255 4555812352 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:57:30,842 autoreload 44293 4543823360 Watching for file changes with StatReloader
+ERROR 2022-07-06 11:57:38,045 basehttp 44293 123145416839168 "GET /materials/ HTTP/1.1" 500 95096
+INFO 2022-07-06 11:58:10,577 autoreload 44293 4543823360 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:58:13,087 autoreload 44314 4708371968 Watching for file changes with StatReloader
+ERROR 2022-07-06 11:58:21,533 basehttp 44314 123145486544896 "GET /materials/ HTTP/1.1" 500 95094
+INFO 2022-07-06 11:58:42,138 autoreload 44314 4708371968 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 11:58:44,652 autoreload 44354 4742209024 Watching for file changes with StatReloader
+ERROR 2022-07-06 11:58:52,609 basehttp 44354 123145599528960 "GET /materials/ HTTP/1.1" 500 95121
+INFO 2022-07-06 12:00:01,382 autoreload 44354 4742209024 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/models.py changed, reloading.
+INFO 2022-07-06 12:00:02,884 autoreload 44435 4590841344 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:00:12,905 basehttp 44435 123145477165056 "GET /materials/ HTTP/1.1" 500 95121
+INFO 2022-07-06 12:01:18,834 autoreload 44435 4590841344 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:01:21,249 autoreload 44468 4720143872 Watching for file changes with StatReloader
+INFO 2022-07-06 12:01:29,575 basehttp 44468 123145582227456 - Broken pipe from ('127.0.0.1', 58871)
+
+ERROR 2022-07-06 12:01:29,586 basehttp 44468 123145599016960 "GET /materials/ HTTP/1.1" 500 114006
+INFO 2022-07-06 12:04:48,517 autoreload 44468 4720143872 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:04:51,030 autoreload 44525 4573117952 Watching for file changes with StatReloader
+INFO 2022-07-06 12:04:54,496 basehttp 44525 123145601138688 "GET /materials/ HTTP/1.1" 200 13130
+ERROR 2022-07-06 12:05:22,200 basehttp 44525 123145601138688 "GET /materials/1/ HTTP/1.1" 500 99061
+INFO 2022-07-06 12:05:41,698 autoreload 44525 4573117952 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:05:43,595 autoreload 44554 4362288640 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:05:50,597 basehttp 44554 123145462280192 "GET /materials/1/ HTTP/1.1" 500 99255
+INFO 2022-07-06 12:09:20,475 autoreload 44554 4362288640 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:09:23,350 autoreload 44621 4477451776 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:09:30,150 basehttp 44621 123145339719680 "GET /materials/1/ HTTP/1.1" 500 131930
+INFO 2022-07-06 12:09:52,024 autoreload 44621 4477451776 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:09:53,587 autoreload 44641 4594482688 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:10:00,458 basehttp 44641 123145505959936 "GET /materials/1/ HTTP/1.1" 500 99255
+INFO 2022-07-06 12:10:22,119 autoreload 44641 4594482688 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:10:24,228 autoreload 44678 4506824192 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:10:31,527 basehttp 44678 123145386627072 "GET /materials/1/ HTTP/1.1" 500 105074
+INFO 2022-07-06 12:12:55,218 autoreload 44678 4506824192 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:12:58,251 autoreload 44724 4669160960 Watching for file changes with StatReloader
+INFO 2022-07-06 12:15:44,525 autoreload 44724 4669160960 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:15:46,690 autoreload 44773 4741770752 Watching for file changes with StatReloader
+INFO 2022-07-06 12:15:48,868 basehttp 44773 123145428271104 "GET /materials/1/ HTTP/1.1" 200 14528
+INFO 2022-07-06 12:16:25,904 autoreload 44773 4741770752 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:16:27,981 autoreload 44839 4581015040 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:16:38,296 basehttp 44839 123145536512000 "GET /materials/1/ HTTP/1.1" 500 99255
+ERROR 2022-07-06 12:17:23,092 basehttp 44839 123145536512000 "GET /materials/1/ HTTP/1.1" 500 99248
+INFO 2022-07-06 12:17:23,405 basehttp 44839 123145536512000 "GET /materials/ HTTP/1.1" 200 13130
+INFO 2022-07-06 12:22:09,536 autoreload 44839 4581015040 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:22:12,362 autoreload 44995 4578475520 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:22:25,809 basehttp 44995 123145349033984 "GET /materials/ HTTP/1.1" 500 113977
+INFO 2022-07-06 12:22:30,729 basehttp 44995 123145349033984 "GET /materials/1/ HTTP/1.1" 200 14528
+INFO 2022-07-06 12:22:56,152 autoreload 44995 4578475520 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:22:58,518 autoreload 45022 4584185344 Watching for file changes with StatReloader
+INFO 2022-07-06 12:23:05,652 basehttp 45022 123145528344576 - Broken pipe from ('127.0.0.1', 59190)
+
+ERROR 2022-07-06 12:23:05,664 basehttp 45022 123145545134080 "GET /materials/1/ HTTP/1.1" 500 106713
+INFO 2022-07-06 12:23:42,012 autoreload 45022 4584185344 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:23:44,808 autoreload 45062 4429839872 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:23:52,196 basehttp 45062 123145416671232 "GET /materials/1/ HTTP/1.1" 500 105235
+ERROR 2022-07-06 12:23:57,815 basehttp 45062 123145416671232 "GET /materials/1/ HTTP/1.1" 500 105228
+ERROR 2022-07-06 12:23:58,397 basehttp 45062 123145416671232 "GET /materials/ HTTP/1.1" 500 113991
+INFO 2022-07-06 12:24:07,716 autoreload 45062 4429839872 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:24:10,624 autoreload 45099 4665392640 Watching for file changes with StatReloader
+INFO 2022-07-06 12:24:15,330 basehttp 45099 123145467437056 "GET /materials/ HTTP/1.1" 200 13072
+INFO 2022-07-06 12:24:58,608 autoreload 45099 4665392640 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:25:01,054 autoreload 45219 4543053312 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:25:12,560 basehttp 45219 123145371619328 "GET /materials/1/ HTTP/1.1" 500 99255
+INFO 2022-07-06 12:25:19,297 basehttp 45219 123145371619328 "GET /materials/ HTTP/1.1" 200 13072
+INFO 2022-07-06 12:34:21,373 autoreload 45219 4543053312 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:34:23,393 autoreload 45414 4564557312 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:34:32,928 basehttp 45414 123145517088768 "GET /materials/ HTTP/1.1" 500 139147
+INFO 2022-07-06 12:39:02,583 autoreload 45651 4663877120 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:39:12,765 basehttp 45651 123145446936576 "GET /materials/ HTTP/1.1" 500 144807
+INFO 2022-07-06 12:42:02,255 autoreload 45690 4489281024 Watching for file changes with StatReloader
+ERROR 2022-07-06 12:42:09,322 basehttp 45690 123145340882944 "GET /materials/ HTTP/1.1" 500 112698
+ERROR 2022-07-06 12:42:14,252 basehttp 45690 123145340882944 "GET /materials/1/ HTTP/1.1" 500 99156
+INFO 2022-07-06 12:42:26,626 autoreload 45690 4489281024 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:42:28,785 autoreload 45718 4536188416 Watching for file changes with StatReloader
+INFO 2022-07-06 12:42:34,223 basehttp 45718 123145530957824 "GET /materials/1/ HTTP/1.1" 200 14528
+INFO 2022-07-06 12:42:39,891 basehttp 45718 123145530957824 "GET /materials/ HTTP/1.1" 200 13193
+INFO 2022-07-06 12:42:44,508 basehttp 45718 123145530957824 "GET /materials/1/ HTTP/1.1" 200 14528
+INFO 2022-07-06 12:42:52,889 basehttp 45718 123145530957824 "GET /materials/ HTTP/1.1" 200 13193
+ERROR 2022-07-06 12:44:01,016 basehttp 45718 123145530957824 "POST /materials/ HTTP/1.1" 500 99981
+ERROR 2022-07-06 12:44:01,054 basehttp 45718 123145547747328 "POST /materials/ HTTP/1.1" 500 99981
+ERROR 2022-07-06 12:44:01,181 basehttp 45718 123145564536832 "POST /materials/ HTTP/1.1" 500 99981
+ERROR 2022-07-06 12:44:01,297 basehttp 45718 123145581326336 "POST /materials/ HTTP/1.1" 500 99981
+ERROR 2022-07-06 12:44:01,299 basehttp 45718 123145598115840 "POST /materials/ HTTP/1.1" 500 99981
+INFO 2022-07-06 12:45:12,214 autoreload 45718 4536188416 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:45:14,610 autoreload 45775 4639534592 Watching for file changes with StatReloader
+INFO 2022-07-06 12:47:01,301 autoreload 45775 4639534592 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:47:02,317 autoreload 45809 4685655552 Watching for file changes with StatReloader
+INFO 2022-07-06 12:47:31,192 autoreload 45809 4685655552 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/api.py changed, reloading.
+INFO 2022-07-06 12:47:33,580 autoreload 45836 4641832448 Watching for file changes with StatReloader
+INFO 2022-07-06 12:47:45,835 basehttp 45836 123145483362304 "GET /materials/ HTTP/1.1" 200 13193
+ERROR 2022-07-06 12:47:57,101 basehttp 45836 123145483362304 "POST /materials/ HTTP/1.1" 500 99563
+INFO 2022-07-06 12:52:32,484 autoreload 45836 4641832448 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:52:34,832 autoreload 45959 4734270976 Watching for file changes with StatReloader
+INFO 2022-07-06 12:52:38,137 basehttp 45959 123145565290496 "GET /materials/ HTTP/1.1" 200 13193
+INFO 2022-07-06 12:52:41,442 basehttp 45959 123145565290496 "GET /materials/ HTTP/1.1" 200 13193
+ERROR 2022-07-06 12:52:51,636 basehttp 45959 123145565290496 "POST /materials/ HTTP/1.1" 500 175260
+INFO 2022-07-06 12:52:57,181 basehttp 45959 123145565290496 "GET /materials/1/ HTTP/1.1" 200 14720
+INFO 2022-07-06 12:53:06,399 basehttp 45959 123145565290496 "GET /materials/ HTTP/1.1" 200 13193
+INFO 2022-07-06 12:53:13,707 basehttp 45959 123145565290496 "GET /materials/1/ HTTP/1.1" 200 14720
+ERROR 2022-07-06 12:53:31,981 basehttp 45959 123145565290496 "PUT /materials/1/ HTTP/1.1" 500 101207
+INFO 2022-07-06 12:53:38,282 basehttp 45959 123145565290496 "GET /materials/ HTTP/1.1" 200 13193
+ERROR 2022-07-06 12:53:55,324 basehttp 45959 123145565290496 "POST /materials/ HTTP/1.1" 500 175681
+WARNING 2022-07-06 12:54:19,877 basehttp 45959 123145565290496 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:54:25,304 basehttp 45959 123145582080000 "GET /materials/ HTTP/1.1" 200 13193
+WARNING 2022-07-06 12:54:25,671 basehttp 45959 123145582080000 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+ERROR 2022-07-06 12:54:34,946 basehttp 45959 123145565290496 "POST /materials/ HTTP/1.1" 500 175681
+INFO 2022-07-06 12:55:45,621 autoreload 45959 4734270976 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:55:48,195 autoreload 46017 4452298240 Watching for file changes with StatReloader
+INFO 2022-07-06 12:55:49,568 basehttp 46017 123145436377088 "GET /materials/ HTTP/1.1" 200 13193
+WARNING 2022-07-06 12:55:50,170 basehttp 46017 123145436377088 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:55:54,256 basehttp 46017 123145453166592 "GET /materials/ HTTP/1.1" 200 13193
+WARNING 2022-07-06 12:55:54,627 basehttp 46017 123145453166592 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:55:59,029 basehttp 46017 123145436377088 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:55:59,341 basehttp 46017 123145436377088 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:33,441 autoreload 46017 4452298240 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:57:36,245 autoreload 46085 4407471616 Watching for file changes with StatReloader
+INFO 2022-07-06 12:57:38,766 basehttp 46085 123145422893056 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:57:39,136 basehttp 46085 123145422893056 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:40,609 basehttp 46085 123145439682560 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:57:40,972 basehttp 46085 123145439682560 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:42,305 basehttp 46085 123145422893056 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:57:42,657 basehttp 46085 123145422893056 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:47,797 basehttp 46085 123145439682560 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:57:48,087 basehttp 46085 123145439682560 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:52,457 basehttp 46085 123145422893056 "GET /materials/ HTTP/1.1" 200 13193
+WARNING 2022-07-06 12:57:52,827 basehttp 46085 123145422893056 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:55,239 basehttp 46085 123145439682560 "GET /materials/ HTTP/1.1" 200 13193
+WARNING 2022-07-06 12:57:55,632 basehttp 46085 123145439682560 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:57:59,827 basehttp 46085 123145422893056 "GET /materials/1/ HTTP/1.1" 200 14720
+WARNING 2022-07-06 12:58:00,198 basehttp 46085 123145422893056 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:58:17,870 autoreload 46085 4407471616 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:58:19,944 autoreload 46131 4500106752 Watching for file changes with StatReloader
+INFO 2022-07-06 12:58:21,701 basehttp 46131 123145497878528 "GET /materials/1/ HTTP/1.1" 200 14528
+WARNING 2022-07-06 12:58:22,278 basehttp 46131 123145497878528 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+ERROR 2022-07-06 12:58:31,449 basehttp 46131 123145514668032 "PUT /materials/1/ HTTP/1.1" 500 101210
+INFO 2022-07-06 12:58:36,270 basehttp 46131 123145514668032 "GET /materials/1/ HTTP/1.1" 200 14528
+INFO 2022-07-06 12:59:36,286 autoreload 46131 4500106752 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/products/api/serializers.py changed, reloading.
+INFO 2022-07-06 12:59:38,284 autoreload 46197 4531908096 Watching for file changes with StatReloader
+WARNING 2022-07-06 12:59:41,928 basehttp 46197 123145362440192 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+WARNING 2022-07-06 12:59:42,143 basehttp 46197 123145379229696 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:59:44,330 basehttp 46197 123145362440192 "GET /materials/ HTTP/1.1" 200 14305
+WARNING 2022-07-06 12:59:44,718 basehttp 46197 123145362440192 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:59:47,347 basehttp 46197 123145379229696 "GET /materials/ HTTP/1.1" 200 14305
+WARNING 2022-07-06 12:59:47,706 basehttp 46197 123145379229696 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 12:59:52,620 basehttp 46197 123145362440192 "GET /materials/ HTTP/1.1" 200 14305
+WARNING 2022-07-06 12:59:52,980 basehttp 46197 123145362440192 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1879
+INFO 2022-07-06 13:00:17,960 basehttp 46197 123145379229696 "POST /materials/ HTTP/1.1" 201 14048
+INFO 2022-07-06 13:00:22,093 basehttp 46197 123145379229696 "GET /materials/ HTTP/1.1" 200 14542
+INFO 2022-07-06 13:00:32,299 basehttp 46197 123145379229696 "GET /materials/2 HTTP/1.1" 301 0
+WARNING 2022-07-06 13:00:32,382 basehttp 46197 123145379229696 "GET /materials/2/ HTTP/1.1" 400 15366
+INFO 2022-07-06 13:00:36,002 basehttp 46197 123145379229696 "GET /materials/ HTTP/1.1" 200 14542
+INFO 2022-07-06 13:00:37,617 basehttp 46197 123145379229696 "GET /materials/3 HTTP/1.1" 301 0
+WARNING 2022-07-06 13:00:37,714 basehttp 46197 123145379229696 "GET /materials/3/ HTTP/1.1" 400 15366
+INFO 2022-07-06 13:00:41,730 basehttp 46197 123145379229696 "GET /materials/5 HTTP/1.1" 301 0
+INFO 2022-07-06 13:00:41,831 basehttp 46197 123145379229696 "GET /materials/5/ HTTP/1.1" 200 15502
