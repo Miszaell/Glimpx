@@ -67,6 +67,11 @@
     <q-page-container class="GPL__page-container">
       <router-view />
     </q-page-container>
+    <q-footer elevated>
+      <q-item clickable v-close-popup to="contacto">
+        <q-item-section>Contacto</q-item-section>
+      </q-item>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -74,7 +79,7 @@
 import { ref } from "vue";
 const stringOptions = ["hlPromotions"];
 export default {
-  name: "GooglePhotosLayout",
+  name: "MainLayout",
 
   setup() {
     const storage = ref(0.26);

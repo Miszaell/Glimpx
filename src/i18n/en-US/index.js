@@ -9,6 +9,8 @@ export default {
     logout: "Logout",
     signUp: "Sign up",
     grant: "Welcome",
+    error: "Invalid username or password",
+    logoutError: "An unexpected error",
   },
   buttons: {
     btnAuth: "Next",

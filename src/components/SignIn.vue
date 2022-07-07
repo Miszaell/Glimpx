@@ -57,9 +57,9 @@ export default {
   methods: {
     loginRequest() {
       if (
-        this.login.email != null ||
+        this.login.username != null ||
         this.login.password != null ||
-        this.login.email != "" ||
+        this.login.username != "" ||
         this.login.password != ""
       ) {
         let formData = new FormData
@@ -70,16 +70,21 @@ export default {
             if (response.data.token) {
               sessionStorage.setItem("token", response.data.token)
               sessionStorage.setItem("user", JSON.stringify(response.data.user))
+              Notify.create({
+                type: "positive",
+                message: `${this.$t('main.grant')} ${response.data.user.username}`,
+              });
               this.$router.push('admin')
             }
           })
           .catch((error) => {
-            console.log(error);
+            if (error.response.data.error) {
+              Notify.create({
+                type: "negative",
+                message: this.$t('main.error'),
+              });
+            }
           });
-        Notify.create({
-          type: "positive",
-          message: this.$t('main.grant'),
-        });
       } else {
         Notify.create({
           type: "warning",

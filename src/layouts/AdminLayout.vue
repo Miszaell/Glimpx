@@ -84,7 +84,7 @@
         </q-toolbar>
 
         <q-list padding>
-          <q-item v-for="link in links1" :key="link.text" clickable class="GPL__drawer-item">
+          <q-item v-for="link in links1" :key="link.text" clickable class="GPL__drawer-item" :to="link.url">
             <q-item-section avatar>
               <q-icon :name="link.icon" />
             </q-item-section>
@@ -111,7 +111,7 @@
       </q-scroll-area>
     </q-drawer>
 
-    <q-page-container class="GPL__page-container">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
@@ -138,10 +138,10 @@ export default {
       storage,
 
       links1: [
-        { icon: "people", text: "users" },
-        { icon: "inventory", text: "stock" },
-        { icon: "health_and_safety", text: "hlPromotions" },
-        { icon: "medication", text: "consult" },
+        { icon: "people", text: "users", url: "users" },
+        { icon: "inventory", text: "stock", url: "stock" },
+        { icon: "health_and_safety", text: "hlPromotions", url: "usehlPromotionsrs" },
+        { icon: "medication", text: "consult", url: "consult" },
       ],
       links2: [
         { icon: "settings", text: "settings" },
@@ -186,14 +186,14 @@ export default {
         .then((response) => {
           if (response.status === 200) {
             sessionStorage.clear()
-            Notify.create({
-              type: "positive",
-              message: this.$t('main.grant'),
-            });
             this.$router.push("auth")
           }
         })
         .catch((error) => {
+          Notify.create({
+            type: "negative",
+            message: this.$t('main.logoutError'),
+          });
           console.error(error);
         });
     },

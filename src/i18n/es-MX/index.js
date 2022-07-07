@@ -6,6 +6,8 @@ export default {
     logout: "Cerrar sesión",
     signUp: "Registrarse",
     grant: "Bienvenido",
+    error: "Nombre de usuario o contraseña inválido",
+    logoutError: "Ocurrió un error inesperado",
   },
   buttons: {
     btnAuth: "Continuar",

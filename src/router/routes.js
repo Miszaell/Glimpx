@@ -3,7 +3,20 @@ const routes = [
     path: "/admin",
     name: "admin",
     component: () => import("src/layouts/AdminLayout.vue"),
-    children: [{ path: "", component: () => import("pages/IndexPage.vue") }],
+    children: [
+      { path: "", component: () => import("pages/IndexPage.vue") },
+      {
+        path: "/users",
+        name: "users",
+        component: () => import("src/pages/users/Users.vue"),
+      },
+      {
+        path: "/user-detail",
+        name: "user",
+        props: true,
+        component: () => import("src/pages/users/UserDetail.vue"),
+      },
+    ],
     meta: {
       requiresAuth: true,
     },
@@ -12,7 +25,15 @@ const routes = [
     path: "/",
     name: "public",
     component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/IndexPage.vue") }],
+    children: [
+      { path: "", component: () => import("pages/IndexPage.vue") },
+      {
+        path: "/contacto",
+        name: "contacto",
+        props: true,
+        component: () => import("src/pages/contacto/Contacto.vue"),
+      },
+    ],
   },
   {
     path: "/auth",

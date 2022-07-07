@@ -85,6 +85,7 @@
 import { ref } from 'vue'
 import SignIn from 'src/components/SignIn.vue'
 import SignUp from 'src/components/SignUp.vue'
+const stringOptions = ["hlPromotions"];
 export default {
   name: "AuthPage",
   components: {
@@ -92,10 +93,56 @@ export default {
     SignUp
   },
   setup() {
-    return {
-      tab: ref('sign_in')
+    const storage = ref(0.26);
+    const text = ref("");
+    const options = ref(null);
+    const filteredOptions = ref([]);
+    const search = ref(null); // $refs.search
+
+    function filter(val, update) {
+      if (options.value === null) {
+        // load data
+        setTimeout(() => {
+          options.value = stringOptions;
+          search.value.filter("");
+        }, 1000);
+        update();
+        return;
+      }
+      if (val === "") {
+        update(() => {
+          filteredOptions.value = options.value.map((op) => ({ label: op }));
+        });
+        return;
+      }
+      update(() => {
+        filteredOptions.value = [
+          {
+            label: val,
+            type: "In this repository",
+          },
+          {
+            label: val,
+            type: "All GitHub",
+          },
+          ...options.value
+            .filter((op) => op.toLowerCase().includes(val.toLowerCase()))
+            .map((op) => ({ label: op })),
+        ];
+      });
     }
+
+    return {
+      text,
+      options,
+      filteredOptions,
+      search,
+      filter,
+      storage,
+      tab: ref('sign_in')
+    };
   },
+
   methods: {
     setLanguage(locale) {
       this.$root.$i18n.locale = locale;
