@@ -1,65 +1,46 @@
 <template>
   <div class="q-pa-md q-gutter-sm">
-    <q-tree :nodes="simple" node-key="label" no-connectors efault-expand-all v-model:expanded="expanded">
-      <template v-slot:default-body="prop">
-        <div v-if="prop.node.link">
-          <q-item clickable :to="prop.node.link">
-            <q-item-label class="text-black">
-              {{ prop.node.sec }}
-            </q-item-label>
-          </q-item>
+    <q-page-container class="GPL__page-container">
+      <div class="flex flex-center q-mt-xl">
+        <div style="min-width: 600px">
+          <q-tabs v-model="tab" align="justify" narrow-indicator class="q-mb-lg">
+            <q-tab class="text-purple" name="sign_in" :label="$t('main.login')" />
+            <q-tab class="text-orange" name="sign_up" :label="$t('main.signUp')" />
+          </q-tabs>
+
+          <div class="q-gutter-y-sm">
+            <q-tab-panels v-model="tab" animated transition-prev="scale" transition-next="scale" class="text-center">
+              <q-tab-panel name="sign_in">
+                <form-contact-vue />
+
+              </q-tab-panel>
+
+              <q-tab-panel name="sign_up">
+                <contact-info-vue />
+              </q-tab-panel>
+            </q-tab-panels>
+          </div>
         </div>
-      </template>
-    </q-tree>
+      </div>
+    </q-page-container>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
+import FormContactVue from 'src/components/FormContact.vue'
+import ContactInfoVue from 'src/components/ContactInfo.vue'
 
 export default {
   name: "contactoPage",
+  components: {
+    FormContactVue,
+    ContactInfoVue
+  },
   setup() {
     return {
-      expanded: ref(['Satisfied customers (with avatar)', 'Good food (with icon)']),
+      tab: ref('sign_in')
 
-      simple: [
-        {
-          label: 'Homepage',
-          avatar: 'https://cdn.quasar.dev/img/boy-avatar.png',
-          children: [
-            {
-              label: 'Login',
-              icon: 'login',
-              children: [
-                {
-                  icon: "person",
-                  label: 'Usuarios',
-                  link: "users",
-                  sec: "Editar usuario"
-                },
-                {
-                  label: 'Good service (disabled node with icon)',
-                  icon: 'room_service',
-                  children: [
-                    { label: 'Prompt attention' },
-                  ]
-                },
-                {
-                  label: 'Pleasant surroundings (with icon)',
-                  icon: 'photo',
-                  children: [
-                    {
-                      label: 'Happy atmosphere (with image)',
-                    },
-                  ]
-                }
-              ]
-            },
-
-          ]
-        }
-      ]
     }
   }
 }

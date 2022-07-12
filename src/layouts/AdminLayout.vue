@@ -10,12 +10,35 @@
 
         <q-space />
 
-        <q-input class="GPL__toolbar-input" dense standout="bg-primary" v-model="search" placeholder="Search">
-          <template v-slot:prepend>
-            <q-icon v-if="search === ''" name="search" />
-            <q-icon v-else name="clear" class="cursor-pointer" @click="search = ''" />
+        <q-select ref="search" dense borderless color="white" use-input class="GL__toolbar-select text-black"
+          label="Search or jump to..." v-model="text" :options="filteredOptions" @filter="filter" style="width: 400px">
+          <template v-slot:no-option>
+            <q-item class="bg-white">
+              <q-item-section>
+                <div class="text-center">
+                  <q-spinner-pie color="grey-5" size="24px" />
+                </div>
+              </q-item-section>
+            </q-item>
           </template>
-        </q-input>
+
+          <template v-slot:option="scope">
+            <q-item v-bind="scope.itemProps" class="GL__select-GL__menu-link bg-white">
+              <q-item-section side>
+                <q-icon name="collections_bookmark" color="black" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label v-html="$t(`dashboard.menu.${scope.opt.label}`)" class="text-black" />
+              </q-item-section>
+              <q-item-section side :class="{ 'default-type': !scope.opt.type }">
+                <q-btn outline dense no-caps text-color="blue-grey-5" size="12px" class="bg-grey-1 q-px-sm">
+                  {{ scope.opt.type || "Jump to" }}
+                  <q-icon name="subdirectory_arrow_left" size="14px" />
+                </q-btn>
+              </q-item-section>
+            </q-item>
+          </template>
+        </q-select>
 
         <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap color="primary" icon="add" no-caps label="Create"
           class="q-ml-sm q-px-md">
@@ -120,22 +143,63 @@
 <script>
 import { ref } from "vue";
 import { Notify } from "quasar";
+const stringOptions = ["hlPromotions"];
+
 export default {
   name: "GooglePhotosLayout",
 
   setup() {
+    const filteredOptions = ref([]);
     const leftDrawerOpen = ref(false);
-    const search = ref("");
+    const search = ref(null);
     const storage = ref(0.26);
+    const options = ref(null);
+    const text = ref("");
 
+    function filter(val, update) {
+      if (options.value === null) {
+        // load data
+        setTimeout(() => {
+          options.value = stringOptions;
+          search.value.filter("");
+        }, 1000);
+        update();
+        return;
+      }
+      if (val === "") {
+        update(() => {
+          filteredOptions.value = options.value.map((op) => ({ label: op }));
+        });
+        return;
+      }
+      update(() => {
+        filteredOptions.value = [
+          {
+            label: val,
+            type: "In this repository",
+          },
+          {
+            label: val,
+            type: "All GitHub",
+          },
+          ...options.value
+            .filter((op) => op.toLowerCase().includes(val.toLowerCase()))
+            .map((op) => ({ label: op })),
+        ];
+      });
+    }
     function toggleLeftDrawer() {
       leftDrawerOpen.value = !leftDrawerOpen.value;
     }
 
     return {
       leftDrawerOpen,
+      text,
+      filteredOptions,
       search,
+      filter,
       storage,
+      toggleLeftDrawer,
 
       links1: [
         { icon: "people", text: "users", url: "users" },
@@ -155,8 +219,6 @@ export default {
         { icon: "dashboard", text: "Collage" },
         { icon: "book", text: "Photo book" },
       ],
-
-      toggleLeftDrawer,
     };
   },
 

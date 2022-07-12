@@ -33,6 +33,12 @@ const routes = [
         props: true,
         component: () => import("src/pages/contacto/Contacto.vue"),
       },
+      {
+        path: "/mapa",
+        name: "mapa",
+        props: true,
+        component: () => import("src/pages/mapa/Mapa.vue"),
+      },
     ],
   },
   {

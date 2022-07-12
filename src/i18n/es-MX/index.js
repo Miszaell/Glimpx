@@ -11,6 +11,7 @@ export default {
   },
   buttons: {
     btnAuth: "Continuar",
+    formContact: "Enviar",
   },
   dashboard: {
     menu: {

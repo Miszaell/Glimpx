@@ -14,23 +14,17 @@
             <div class="col">
               <div class="text-h6">{{ row.name }}</div>
             </div>
-            <div class="col-3">
+            <!-- <div class="col-3">
               <q-btn-toggle v-model="row.state" spread :readonly="edit" size="sm" class="my-custom-toggle" no-caps
                 rounded toggle-color="blue-grey-5" color="white" text-color="visuel" :options="[
                   { label: 'Activo', value: 'open' },
                   { label: 'Inactivo', value: 'close' },
                 ]" />
-            </div>
+            </div> -->
             <div class="col-auto">
               <q-btn color="grey-7" round flat icon="more_vert">
                 <q-menu cover auto-close>
                   <q-list>
-                    <q-item clickable>
-                      <q-item-section no-caps @click="exportTable">Exportar</q-item-section>
-                    </q-item>
-                    <q-item clickable>
-                      <q-item-section>Duplicar</q-item-section>
-                    </q-item>
                     <q-item clickable @click="deleteUser">
                       <q-item-section>Eliminar</q-item-section>
                     </q-item>
@@ -50,15 +44,16 @@
                 <q-input :readonly="edit" filled v-model="row.email" label="Correo *" dense lazy-rules :rules="[
                   (val) => (val && val.length > 0) || 'Please type something',
                 ]" />
+                <q-input :readonly="edit" filled v-model="password" label="Contraseña *" dense lazy-rules :rules="[
+                  (val) => (val && val.length > 0) || 'Please type something',
+                ]" />
               </q-card-section>
               <q-separator vertical />
               <q-card-section class="col-6">
-                <q-select :readonly="edit" :rules="[
-                  (val) =>
-                    (val !== null && val !== '') ||
-                    'Selecciona el tipo de usuario',
-                ]" lazy-rules dense filled v-model="role" :options="roles" emit-value label="Rol" />
-                <q-input v-model="password" v-show="!savepost" dense filled hint="Contraseña *" lazy-rules :rules="[
+                <q-input :readonly="edit" filled v-model="row.username" label="Username *" dense lazy-rules :rules="[
+                  (val) => (val && val.length > 0) || 'Please type something',
+                ]" />
+                <q-input :readonly="edit" filled v-model="row.last_name" label="Last name *" dense lazy-rules :rules="[
                   (val) => (val && val.length > 0) || 'Please type something',
                 ]" />
                 <q-btn class="q-ma-md" @click="randomPass" v-show="!savepost" label="Generar contraseña" color="green"
@@ -73,9 +68,11 @@
           <div class="row items-center no-wrap">
             <div class="col">
               <div class="q-pa-md q-gutter-sm text-h6">
-                <q-btn @click="save" v-show="!saveput" label="Guardar cambios" color="blue" icon="save" size="sm">
+                <q-btn @click="validateForm('put')" v-show="!saveput" label="Guardar cambios" color="blue" icon="save"
+                  size="sm">
                 </q-btn>
-                <q-btn @click="saveNew" v-show="!savepost" label="Guardar" color="blue" icon="save" size="sm">
+                <q-btn @click="validateForm('created')" v-show="!savepost" label="Guardar" color="blue" icon="save"
+                  size="sm">
                 </q-btn>
                 <q-btn @click="createOf" v-show="!edit" label="Descartar" color="red-9" icon="delete" size="sm">
                 </q-btn>
@@ -200,6 +197,8 @@ export default {
     dismiss() {
       this.rows.name = "";
       this.rows.email = "";
+      this.rows.username = "";
+      this.rows.last_name = "";
       this.rows.tipo = "";
       this.rows.state = "";
       this.password = null;
@@ -237,10 +236,10 @@ export default {
       let rules = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
       if (form == "created") {
         if (
-          !this.rows.name ||
-          !this.rows.email ||
-          !this.rows.tipo ||
-          !this.rows.state ||
+          !this.row.name ||
+          !this.row.email ||
+          !this.row.username ||
+          !this.row.last_name ||
           !this.password
         ) {
           Notify.create({
@@ -248,7 +247,7 @@ export default {
             message: "Contesta todos los campos.",
           });
         } else {
-          if (rules.exec(this.rows.email)) {
+          if (rules.exec(this.row.email)) {
             this.saveNew();
           } else {
             Notify.create({
@@ -258,13 +257,13 @@ export default {
           }
         }
       } else {
-        if (!this.rows.name || !this.rows.email || !this.rows.tipo) {
+        if (!this.row.name || !this.row.email || !this.row.username || !this.row.last_name) {
           Notify.create({
             type: "warning",
             message: "Contesta todos los campos.",
           });
         } else {
-          if (rules.exec(this.rows.email)) {
+          if (rules.exec(this.row.email)) {
             this.save();
           } else {
             Notify.create({
@@ -279,8 +278,13 @@ export default {
       if (this.$route.params.action == "new") {
         this.createOn();
       } else {
+        let token = sessionStorage.getItem("token")
         this.$api
-          .get(`users/${this.$route.params.id}/`)
+          .get(`users/${this.$route.params.id}/`, {
+            headers: {
+              Authorization: `Token ${token}`,
+            }
+          })
           .then((res) => {
             this.row = res.data;
             this.rows = res.data;
@@ -288,28 +292,24 @@ export default {
       }
     },
     saveNew() {
+      let token = sessionStorage.getItem("token")
       let formData = new FormData();
-      let userId = sessionStorage.getItem("userId");
-      let r_object = Track.TrackVisibility(
-        "post",
-        this.track_visibility,
-        this.row
-      );
       formData.append("name", this.row.name);
+      formData.append("username", this.row.username);
+      formData.append("last_name", this.row.last_name);
       formData.append("email", this.row.email);
-      formData.append("contraseña", this.password);
-      formData.append("tipo", this.row.tipo);
-      formData.append("role", this.role);
-      formData.append("state", this.row.state);
-      formData.append("r_object", JSON.stringify(r_object));
-      formData.append("user_id", userId);
-      this.postUsuario(formData)
+      formData.append("password", this.password);
+      this.$api.post(`users/`, formData, {
+        headers: {
+          Authorization: `Token ${token}`,
+        }
+      })
         .then((response) => {
-          this.commits = response.r_object.commits;
-          this.$router.push({
-            name: "usuarios_detalle",
-            params: { id: response.id },
-          });
+          if (response.status == 201) {
+            this.$router.push({
+              name: "users",
+            });
+          }
         })
         .catch((error) => {
           Notify.create({
@@ -320,44 +320,44 @@ export default {
         });
     },
     save() {
+      let token = sessionStorage.getItem("token")
       let formData = new FormData();
-      let userId = sessionStorage.getItem("userId");
-      let r_object = Track.TrackVisibility(
-        "put",
-        this.track_visibility,
-        this.rows,
-        this.row
-      );
-      formData.append("id", this.row.id);
       formData.append("name", this.row.name);
+      formData.append("username", this.row.username);
+      formData.append("last_name", this.row.last_name);
       formData.append("email", this.row.email);
-      formData.append("role", this.role);
-      formData.append("state", this.row.state);
-      formData.append("r_object", JSON.stringify(r_object));
-      formData.append("user_id", userId);
 
-      this.putUsuario(formData)
+      this.$api.put(`users/${this.$route.params.id}/`, formData, {
+        headers: {
+          Authorization: `Token ${token}`,
+        }
+      })
         .then((response) => {
           this.edit = true;
           this.saveput = true;
-          this.commits = response.r_object.commits;
+          if (response.status == 200) {
+            Notify.create({
+              type: "positive",
+              message: "Registro actualizado",
+            });
+          }
         })
         .catch((error) => {
           Notify.create({
             type: "negative",
             message: "Ocurrió un error al actualizar el elemento ",
           });
-          console.log(error);
+          console.error(error);
         });
     },
     deleteUser() {
-      let formData = new FormData();
-      let userId = sessionStorage.getItem("userId");
-      formData.append("id", this.rows.id);
-      formData.append("user_id", userId);
-      this.$api.delete(`users/${this.params.id}/`)
+      let token = sessionStorage.getItem("token")
+      this.$api.delete(`users/${this.$route.params.id}/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        }
+      })
         .then((res) => {
-          console.log(res)
           this.$router.push({
             path: "/users",
           });

@@ -85,10 +85,10 @@ export default {
   },
   methods: {
     getUsuarios() {
-      let user = JSON.parse(sessionStorage.getItem("user"))
+      let token = sessionStorage.getItem("token")
       this.$api.get("users/", {
         headers: {
-          Authorization: `Token ${user.token}`,
+          Authorization: `Token ${token}`,
         }
       }).then((res) => { this.rows = res.data })
     },

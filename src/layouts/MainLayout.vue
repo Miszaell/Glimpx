@@ -3,7 +3,7 @@
     <q-header elevated class="bg-white text-grey-8" height-hint="64">
       <q-toolbar class="GPL__toolbar" style="height: 64px">
         <q-toolbar-title v-if="$q.screen.gt.sm" shrink class="row items-center no-wrap">
-          <span class="q-ml-sm">{{ $t("main.appTitle") }}</span>
+          <span class="q-ml-sm" @click="$router.push('/')">{{ $t("main.appTitle") }}</span>
         </q-toolbar-title>
 
         <q-space />
@@ -70,6 +70,9 @@
     <q-footer elevated>
       <q-item clickable v-close-popup to="contacto">
         <q-item-section>Contacto</q-item-section>
+      </q-item>
+      <q-item clickable v-close-popup to="mapa">
+        <q-item-section>Mapa</q-item-section>
       </q-item>
     </q-footer>
   </q-layout>
