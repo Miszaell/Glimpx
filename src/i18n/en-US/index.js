@@ -11,6 +11,8 @@ export default {
     grant: "Welcome",
     error: "Invalid username or password",
     logoutError: "An unexpected error",
+    contactForm: "Contact us",
+    contactInfo: "Contact Information",
   },
   buttons: {
     btnAuth: "Next",

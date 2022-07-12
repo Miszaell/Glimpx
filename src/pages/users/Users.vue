@@ -50,7 +50,7 @@
 
 <script>
 import { ref } from "vue";
-
+import { Notify } from "quasar";
 export default {
   name: "usuariosPage",
   data() {
@@ -91,9 +91,26 @@ export default {
           Authorization: `Token ${token}`,
         }
       }).then((res) => { this.rows = res.data })
+        .catch((error) => {
+          console.log(error.response)
+          if (error.response.data.expired) {
+            Notify.create({
+              type: "warning",
+              message: "Contesta todos los campos.",
+            });
+          }
+        })
+    },
+
+    getToken() {
+      this.$api.get("refresh-token/").then((res) => { console.log(res.data) })
+        .catch((error) => {
+          console.error(error)
+        })
     },
 
     go_todetalle(id) {
+      ``
       this.$router.push({
         name: 'user',
         params: { id: id },

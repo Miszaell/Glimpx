@@ -8,6 +8,8 @@ export default {
     grant: "Bienvenido",
     error: "Nombre de usuario o contraseña inválido",
     logoutError: "Ocurrió un error inesperado",
+    contactForm: "Contactanos",
+    contactInfo: "Informacion de Contacto",
   },
   buttons: {
     btnAuth: "Continuar",
