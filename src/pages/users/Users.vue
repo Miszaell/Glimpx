@@ -51,6 +51,7 @@
 <script>
 import { ref } from "vue";
 import { Notify } from "quasar";
+import api from "src/api";
 export default {
   name: "usuariosPage",
   data() {
@@ -86,32 +87,12 @@ export default {
   methods: {
     getUsuarios() {
       let token = sessionStorage.getItem("token")
-      this.$api.get("users/", {
-        headers: {
-          Authorization: `Token ${token}`,
-        }
-      }).then((res) => { this.rows = res.data })
+      api.get("users/").then((res) => { this.rows = res.data })
         .catch((error) => {
           console.error(error)
-          if (error.response.data.expired == true) {
-            this.getToken()
-          }
         })
     },
 
-    getToken() {
-      let user = JSON.parse(sessionStorage.getItem("user"))
-      let formData = new FormData()
-      formData.append("email", user.email)
-      this.$api.post("refresh-token/", formData)
-        .then((res) => {
-          sessionStorage.setItem("token", res.data.token)
-          this.getUsuarios()
-        })
-        .catch((error) => {
-          console.error(error)
-        })
-    },
 
     go_todetalle(id) {
       this.$router.push({

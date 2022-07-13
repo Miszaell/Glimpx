@@ -95,6 +95,7 @@
 
 <script>
 import { Notify } from "quasar";
+import api from "src/api";
 import { defineComponent } from "vue";
 import { ref } from "vue";
 
@@ -123,12 +124,8 @@ export default defineComponent({
   },
   methods: {
     setUser() {
-      let token = sessionStorage.getItem("token");
-      this.$api.get("users/1/", {
-        headers: {
-          Authorization: `Token ${token}`,
-        }
-      }).then((res) => {
+      let usr = JSON.parse(sessionStorage.getItem("user"))
+      api.get(`users/${usr.id}/`).then((res) => {
         let user = res.data
         this.user.name = user.name;
         this.user.email = user.email;

@@ -146,8 +146,8 @@
 
 <script>
 import { Notify } from "quasar";
+import api from "src/api";
 import { ref } from "vue";
-
 export default {
   name: "usuarios_detalle",
   data() {
@@ -295,13 +295,8 @@ export default {
       if (this.$route.params.action == "new") {
         this.createOn();
       } else {
-        let token = sessionStorage.getItem("token")
-        this.$api
-          .get(`users/${this.$route.params.id}/`, {
-            headers: {
-              Authorization: `Token ${token}`,
-            }
-          })
+        api
+          .get(`users/${this.$route.params.id}/`)
           .then((res) => {
             this.row = res.data;
             this.rows = res.data;

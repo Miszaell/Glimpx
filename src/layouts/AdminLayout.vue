@@ -87,6 +87,7 @@
               <q-list style="min-width: 100px">
                 <q-item clickable v-close-popup to="perfil">
                   <q-item-section>{{ username }}</q-item-section>
+                  <q-tooltip>Perfil</q-tooltip>
                 </q-item>
                 <q-item clickable v-close-popup to="/">
                   <q-item-section>Ir a hompage</q-item-section>
