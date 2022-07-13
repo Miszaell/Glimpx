@@ -67,11 +67,11 @@
     <q-page-container class="GPL__page-container">
       <router-view />
     </q-page-container>
-    <q-footer elevated>
-      <q-item clickable v-close-popup to="contacto">
+    <q-footer bordered class="bg-white text-black flex flex-center">
+      <q-item clickable to="contacto">
         <q-item-section>Contacto</q-item-section>
       </q-item>
-      <q-item clickable v-close-popup to="mapa">
+      <q-item clickable to="mapa">
         <q-item-section>Mapa</q-item-section>
       </q-item>
     </q-footer>

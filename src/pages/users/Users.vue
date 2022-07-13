@@ -92,25 +92,28 @@ export default {
         }
       }).then((res) => { this.rows = res.data })
         .catch((error) => {
-          console.log(error.response)
-          if (error.response.data.expired) {
-            Notify.create({
-              type: "warning",
-              message: "Contesta todos los campos.",
-            });
+          console.error(error)
+          if (error.response.data.expired == true) {
+            this.getToken()
           }
         })
     },
 
     getToken() {
-      this.$api.get("refresh-token/").then((res) => { console.log(res.data) })
+      let user = JSON.parse(sessionStorage.getItem("user"))
+      let formData = new FormData()
+      formData.append("email", user.email)
+      this.$api.post("refresh-token/", formData)
+        .then((res) => {
+          sessionStorage.setItem("token", res.data.token)
+          this.getUsuarios()
+        })
         .catch((error) => {
           console.error(error)
         })
     },
 
     go_todetalle(id) {
-      ``
       this.$router.push({
         name: 'user',
         params: { id: id },

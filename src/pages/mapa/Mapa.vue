@@ -1,8 +1,6 @@
 <template>
   <div class="q-pa-md q-gutter-sm">
-    <q-tree :nodes="simple" node-key="label" no-connectors efault-expand-all v-model:expanded="expanded">
-
-    </q-tree>
+    <q-tree :nodes="simple" node-key="label" efault-expand-all v-model:expanded="expanded" />
   </div>
 </template>
 
@@ -13,7 +11,7 @@ export default {
   name: "MapaPage",
   setup() {
     return {
-      expanded: ref(['Satisfied customers (with avatar)', 'Good food (with icon)']),
+      expanded: ref(['Homepage', 'Login']),
 
       simple: [
         {

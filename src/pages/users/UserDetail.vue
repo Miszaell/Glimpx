@@ -84,6 +84,9 @@
               <div class="q-pa-md q-gutter-sm text-h6" align="right">
                 <q-btn size="sm" v-show="!edit" @click="resetPass()" label="Generar nueva contraseña" color="blue-9"
                   icon="key" />
+                <q-btn @click="dialogImage = true" v-show="row.image" label="Ver foto" color="secondary" icon="camera"
+                  size="sm">
+                </q-btn>
                 <q-btn size="sm" v-show="edit" @click="createOn" label="Crear" color="secondary" icon="add">
                 </q-btn>
               </div>
@@ -94,6 +97,19 @@
       </q-card>
     </div>
     <br />
+    <q-dialog v-model="dialogImage">
+      <q-layout view="hHh Lpr fFf" container class="bg-white" style="max-width: 400px; max-height: 550px;">
+        <q-page-container>
+          <q-page padding>
+            <q-img :src="`http://localhost:8000${row.image}`" width="350px" height="500px">
+              <div class="absolute-bottom text-subtitle1 text-center">
+                {{ row.image.split('/media/perfil/')[1] }}
+              </div>
+            </q-img>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </q-dialog>
     <q-dialog v-model="dialogPass" persistent>
       <q-layout view="hHh Lpr fFf" container class="bg-white" style="max-height: 350px">
         <q-header class="bg-visuel">
@@ -137,6 +153,7 @@ export default {
   data() {
     return {
       dialogPass: false,
+      dialogImage: false,
       track_visibility: ["name", "email", "state", "role"],
       commits: [],
       commitspre: [],

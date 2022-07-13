@@ -81,12 +81,15 @@
           </q-btn>
           <q-btn round flat>
             <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+              <img :src="image" />
             </q-avatar>
             <q-menu>
               <q-list style="min-width: 100px">
-                <q-item clickable v-close-popup>
+                <q-item clickable v-close-popup to="perfil">
                   <q-item-section>{{ username }}</q-item-section>
+                </q-item>
+                <q-item clickable v-close-popup to="/">
+                  <q-item-section>Ir a hompage</q-item-section>
                 </q-item>
                 <q-item clickable v-close-popup @click="logoutRequest">
                   <q-item-section>{{ $t('main.logout') }}</q-item-section>
@@ -225,11 +228,13 @@ export default {
   data() {
     return {
       username: null,
+      image: "https://cdn.quasar.dev/img/boy-avatar.png"
     }
   },
   created() {
     let user = JSON.parse(sessionStorage.getItem("user"))
     if (user) {
+      this.image = `http://localhost:8000${user.image}`
       this.username = user.email
     }
   },
