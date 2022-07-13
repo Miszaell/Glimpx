@@ -1,10 +1,11 @@
 from django.shortcuts import get_object_or_404
 from apps.users.authentication_mixins import Authentication
+from apps.base.utils import validate_files
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import viewsets
-
+from rest_framework.parsers import JSONParser, MultiPartParser
 from apps.users.models import User
 from apps.users.api.serializers import (
     CustomUserSerializer, UserListSerializer, UpdateUserSerializer,
@@ -12,10 +13,11 @@ from apps.users.api.serializers import (
 )
 
 
-class UserViewSet(viewsets.GenericViewSet):
+class UserViewSet(Authentication,viewsets.GenericViewSet):
     model = User
     serializer_class = CustomUserSerializer
     list_serializer_class = UserListSerializer
+    parser_classes = (JSONParser, MultiPartParser)
     queryset = None
 
     def get_object(self, pk):
@@ -25,7 +27,7 @@ class UserViewSet(viewsets.GenericViewSet):
         if self.queryset is None:
             self.queryset = self.model.objects\
                 .filter(is_active=True)\
-                .values('id', 'username', 'email', 'name')
+                .values('id', 'username', 'email', 'name', 'image')
         return self.queryset
 
     @action(detail=True, methods=['post'])
@@ -67,16 +69,21 @@ class UserViewSet(viewsets.GenericViewSet):
 
     def update(self, request, pk=None):
         user = self.get_object(pk)
-        user_serializer = UpdateUserSerializer(user, data=request.data)
-        if user_serializer.is_valid():
-            user_serializer.save()
+        if user:
+            if request.data['image']:
+                data = validate_files(request.data, 'image', True)
+                user_serializer = UpdateUserSerializer(user, data=data)
+            else:
+                user_serializer = UpdateUserSerializer(user, data=request.data)
+            if user_serializer.is_valid():
+                user_serializer.save()
+                return Response({
+                    'message': 'Successfully updated user'
+                }, status=status.HTTP_200_OK)
             return Response({
-                'message': 'Successfully registered user'
-            }, status=status.HTTP_200_OK)
-        return Response({
-            'message': 'There are errors in the update',
-            'errors': user_serializer.errors
-        }, status=status.HTTP_400_BAD_REQUEST)
+                'message': 'There are errors in the update',
+                'errors': user_serializer.errors
+            }, status=status.HTTP_400_BAD_REQUEST)
 
     def destroy(self, request, pk=None):
         user_destroy = self.model.objects.filter(id=pk).update(is_active=False)

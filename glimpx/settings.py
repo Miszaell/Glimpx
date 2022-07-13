@@ -43,6 +43,7 @@ LOCAL_APPS = [
     # 'apps.base',
     'apps.users',
     'apps.products',
+    'apps.health',
     # 'apps.expense_manager',
 ]
 
@@ -144,7 +145,9 @@ AUTH_USER_MODEL = 'users.User'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = (BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

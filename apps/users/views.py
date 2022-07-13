@@ -8,11 +8,11 @@ from rest_framework.views import APIView
 from apps.users.api.serializers import UserTokenSerializer
 
 class UserToken(APIView):
-    def get(self,request,*args,**kwargs):
-        username = request.GET.get('username')
+    def post(self,request,*args,**kwargs):
+        email = request.data['email']
         try:
             user_token = Token.objects.get(
-                user = UserTokenSerializer().Meta.model.objects.filter(username = username).first()
+                user = UserTokenSerializer().Meta.model.objects.filter(email = email).first()
             )
             return Response({
                 'token': user_token.key
