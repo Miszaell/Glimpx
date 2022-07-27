@@ -10,6 +10,7 @@ urlpatterns = [
     path('logout/', Logout.as_view(), name = 'logout'),
     path('users/', include('apps.users.api.routers')),
     path('materials/', include('apps.products.api.routers')),
+    path('promotions/', include('apps.promotions.api.routers')),
     path('physicalExm/', include('apps.health.api.routers.routerPhysical')),
     path('clinicalExm/', include('apps.health.api.routers.routerClinical')),
     path('familyBkg/', include('apps.health.api.routers.routerFamily')),

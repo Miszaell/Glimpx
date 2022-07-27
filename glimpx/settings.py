@@ -44,18 +44,14 @@ LOCAL_APPS = [
     'apps.users',
     'apps.products',
     'apps.health',
-    # 'apps.expense_manager',
+    'apps.promotions',
 ]
 
 THIRD_APPS = [
     'corsheaders',
-    # 'automatic_crud',
     'rest_framework',
     'rest_framework.authtoken',
-    # 'rest_framework_simplejwt',
-    # 'rest_framework_simplejwt.token_blacklist',
     'simple_history',
-    # 'drf_yasg',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
