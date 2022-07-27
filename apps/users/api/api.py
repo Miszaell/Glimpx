@@ -9,7 +9,7 @@ from rest_framework.parsers import JSONParser, MultiPartParser
 from apps.users.models import User
 from apps.users.api.serializers import (
     CustomUserSerializer, UserListSerializer, UpdateUserSerializer,
-    PasswordSerializer
+    PasswordSerializer, UserSerializer
 )
 
 
@@ -27,7 +27,7 @@ class UserViewSet(Authentication,viewsets.GenericViewSet):
         if self.queryset is None:
             self.queryset = self.model.objects\
                 .filter(is_active=True)\
-                .values('id', 'username', 'email', 'name', 'image')
+                .values('id', 'username', 'last_name', 'email', 'name', 'image')
         return self.queryset
 
     @action(detail=True, methods=['post'])

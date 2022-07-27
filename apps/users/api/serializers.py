@@ -10,7 +10,7 @@ class UserTokenSerializer(serializers.ModelSerializer):
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id','username','email', 'password','name','last_name', 'image')
+        fields = ('id','username','email', 'password','name','last_name', 'date_of_birth', 'address', 'phone', 'curp', 'university_id', 'ssn', 'gender', 'image')
         
     def create(self, validated_data):
         user = User(**validated_data)
@@ -23,20 +23,27 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
         
+    def create(self,validated_data):
+        user = User(**validated_data)
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
+        
     def to_representation(self, instance):
         return {
             'id': instance.id,
             'name': instance.name,
             'username': instance.username,
             'email': instance.email,
+            'date_of_birth': instance.date_of_birth,
+            'address': instance.address,
+            'phone': instance.phone,
+            'curp': instance.curp,
+            'university_id': instance.university_id,
+            'ssn': instance.ssn,
+            'gender': instance.gender,
             'image': instance.image.url if instance.image != '' else '',
         }
-        
-    def create(self,validated_data):
-        user = User(**validated_data)
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
 
 class UpdateUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -57,11 +64,12 @@ class PasswordSerializer(serializers.Serializer):
 class UserListSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-
+        fields = "__all__"
     def to_representation(self, instance):
         return {
             'id': instance['id'],
             'name': instance['name'],
+            'last_name': instance['last_name'] if instance['last_name'] != '' else '',
             'username': instance['username'],
             'email': instance['email'],
         }

@@ -26,10 +26,23 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    MALE = 'Male'
+    FEMALE = 'Female'
+    genderChoices = (
+        (MALE, 'Male'),
+        (FEMALE, 'Female')
+    )
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField('Email', max_length=255, unique=True,)
     name = models.CharField('Nombre(s)', max_length=255, blank=True, null=True)
     last_name = models.CharField('Apellidos', max_length=255, blank=True, null=True)
+    date_of_birth = models.DateField('Fecha de nacimiento', max_length=255, blank=True, null=True, default='1980-01-01')
+    address = models.TextField('Dirección', blank=True, null=True)
+    phone = models.CharField('Telefono', max_length=10, blank=True, null=True)
+    curp = models.CharField('CURP', max_length=18, blank=True, null=True)
+    university_id = models.CharField('Matricula', max_length=255, blank=True, null=True)
+    ssn = models.CharField('NSS', max_length=11, blank=True, null=True)
+    gender = models.CharField('Genero', max_length=40, choices=genderChoices, blank=True, null=True)
     image = models.ImageField('Imagen de perfil', upload_to='perfil/', max_length=255, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

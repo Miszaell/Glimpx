@@ -3,12 +3,12 @@ from apps.base.models import BaseModel
 from apps.users.models import User
 class PhysicalExploration(BaseModel):
     user=models.ForeignKey(User, on_delete=models.CASCADE)
-    temperature=models.DecimalField(max_digits=5, decimal_places=2)
-    pulse=models.DecimalField(max_digits=5, decimal_places=2)
-    heart_rate=models.DecimalField(max_digits=5, decimal_places=2)
-    breathing_rate=models.DecimalField(max_digits=5, decimal_places=2)
-    weight=models.DecimalField(max_digits=5, decimal_places=2)
-    height=models.DecimalField(max_digits=5, decimal_places=2)
+    temperature=models.DecimalField(max_digits=6, decimal_places=2)
+    pulse=models.DecimalField(max_digits=6, decimal_places=2)
+    heart_rate=models.DecimalField(max_digits=6, decimal_places=2)
+    breathing_rate=models.DecimalField(max_digits=6, decimal_places=2)
+    weight=models.DecimalField(max_digits=6, decimal_places=2)
+    height=models.DecimalField(max_digits=6, decimal_places=2)
     
     class Meta:
         """Meta definition for Physical Exploration."""
