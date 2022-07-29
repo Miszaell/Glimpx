@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import JSONParser, MultiPartParser
 from rest_framework import viewsets
 from apps.promotions.api.serializaers import PromotionSerializer
-
+from rest_framework.decorators import api_view, action
 
 class PromotionViewSet(viewsets.ModelViewSet):
     serializer_class = PromotionSerializer

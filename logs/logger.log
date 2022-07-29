@@ -216,3 +216,344 @@ INFO 2022-07-27 14:50:40,437 autoreload 66198 4386258432 Watching for file chang
 INFO 2022-07-27 14:50:43,854 basehttp 66198 123145364246528 "GET /promotions/1/ HTTP/1.1" 200 16293
 INFO 2022-07-27 14:50:59,987 basehttp 66198 123145364246528 "GET /promotions/ HTTP/1.1" 200 14976
 INFO 2022-07-27 14:51:09,681 basehttp 66198 123145364246528 "GET /media/promos/Imagen_2.png HTTP/1.1" 200 1280423
+INFO 2022-07-27 14:53:35,804 basehttp 66198 123145381036032 "POST /login/ HTTP/1.1" 201 216
+INFO 2022-07-27 14:55:16,231 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 14:55:34,255 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 14:55:36,539 basehttp 66198 123145381036032 "OPTIONS /promotions/1/ HTTP/1.1" 200 0
+INFO 2022-07-27 14:55:36,593 basehttp 66198 123145381036032 "GET /promotions/1/ HTTP/1.1" 200 207
+INFO 2022-07-27 14:55:43,592 basehttp 66198 123145381036032 "OPTIONS /materials/ HTTP/1.1" 200 0
+INFO 2022-07-27 14:55:43,694 basehttp 66198 123145381036032 "GET /materials/ HTTP/1.1" 200 113
+INFO 2022-07-27 14:55:46,692 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 14:56:03,457 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 14:56:10,368 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 14:58:57,129 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 15:00:15,523 basehttp 66198 123145381036032 "GET /promotions/1/ HTTP/1.1" 200 207
+INFO 2022-07-27 15:00:19,769 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 15:00:44,951 basehttp 66198 123145381036032 "GET /promotions/1/ HTTP/1.1" 200 207
+INFO 2022-07-27 15:01:41,803 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 291
+INFO 2022-07-27 15:01:42,817 basehttp 66198 123145381036032 "GET /promotions/1/ HTTP/1.1" 200 207
+INFO 2022-07-27 15:01:52,325 basehttp 66198 123145381036032 "PUT /promotions/1/ HTTP/1.1" 200 50
+INFO 2022-07-27 15:01:55,305 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 296
+INFO 2022-07-27 15:02:01,016 basehttp 66198 123145381036032 "GET /promotions/1/ HTTP/1.1" 200 212
+INFO 2022-07-27 15:02:15,649 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 296
+INFO 2022-07-27 15:02:20,158 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 296
+INFO 2022-07-27 15:02:32,607 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 296
+INFO 2022-07-27 15:03:13,174 basehttp 66198 123145381036032 "POST /promotions/ HTTP/1.1" 201 44
+INFO 2022-07-27 15:03:18,284 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 15:03:20,702 basehttp 66198 123145381036032 "OPTIONS /promotions/2/ HTTP/1.1" 200 0
+INFO 2022-07-27 15:03:21,077 basehttp 66198 123145381036032 "GET /promotions/2/ HTTP/1.1" 200 110
+INFO 2022-07-27 15:03:37,462 basehttp 66198 123145381036032 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 15:04:22,983 basehttp 66198 123145381036032 "OPTIONS /anamnesis/ HTTP/1.1" 200 0
+INFO 2022-07-27 15:04:23,526 basehttp 66198 123145381036032 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 15:04:27,637 basehttp 66198 123145381036032 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2022-07-27 15:04:27,774 basehttp 66198 123145381036032 "GET /users/ HTTP/1.1" 200 360
+INFO 2022-07-27 15:04:34,272 basehttp 66198 123145381036032 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 15:22:47,022 autoreload 66198 4386258432 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:22:52,426 autoreload 67151 4559441408 Watching for file changes with StatReloader
+INFO 2022-07-27 15:23:50,331 autoreload 67151 4559441408 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:23:54,699 autoreload 67267 4546350592 Watching for file changes with StatReloader
+INFO 2022-07-27 15:24:03,703 autoreload 67267 4546350592 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 15:24:09,069 autoreload 67301 4407037440 Watching for file changes with StatReloader
+INFO 2022-07-27 15:27:34,448 autoreload 67301 4407037440 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:27:38,514 autoreload 67567 4690468352 Watching for file changes with StatReloader
+INFO 2022-07-27 15:28:10,550 autoreload 67567 4690468352 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:28:14,046 autoreload 67626 4599012864 Watching for file changes with StatReloader
+INFO 2022-07-27 15:29:00,344 autoreload 67691 4759219712 Watching for file changes with StatReloader
+WARNING 2022-07-27 15:29:07,891 basehttp 67691 123145379569664 "GET / HTTP/1.1" 404 3334
+INFO 2022-07-27 15:29:15,513 basehttp 67691 123145379569664 "GET /promotions/ HTTP/1.1" 200 15241
+INFO 2022-07-27 15:30:26,769 autoreload 67691 4759219712 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/routers.py changed, reloading.
+INFO 2022-07-27 15:30:31,853 autoreload 67762 4507774464 Watching for file changes with StatReloader
+WARNING 2022-07-27 15:30:36,152 basehttp 67762 123145492320256 "GET / HTTP/1.1" 404 3334
+INFO 2022-07-27 15:31:44,765 autoreload 67762 4507774464 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/routers.py changed, reloading.
+INFO 2022-07-27 15:31:48,762 autoreload 67790 4548427264 Watching for file changes with StatReloader
+INFO 2022-07-27 15:35:00,301 autoreload 67790 4548427264 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:35:03,646 autoreload 67959 4311621120 Watching for file changes with StatReloader
+INFO 2022-07-27 15:35:39,389 autoreload 68025 4536749568 Watching for file changes with StatReloader
+INFO 2022-07-27 15:35:55,287 autoreload 68025 4536749568 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 15:35:58,863 autoreload 68040 4505943552 Watching for file changes with StatReloader
+INFO 2022-07-27 15:36:12,691 autoreload 68040 4505943552 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 15:36:16,412 autoreload 68063 4679687680 Watching for file changes with StatReloader
+INFO 2022-07-27 15:37:00,500 autoreload 68063 4679687680 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:37:04,729 autoreload 68134 4656131584 Watching for file changes with StatReloader
+INFO 2022-07-27 15:37:19,182 autoreload 68134 4656131584 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 15:37:24,387 autoreload 68162 4412952064 Watching for file changes with StatReloader
+WARNING 2022-07-27 15:37:33,239 basehttp 68162 123145399713792 "GET / HTTP/1.1" 404 3456
+INFO 2022-07-27 15:37:42,311 basehttp 68162 123145399713792 "GET /promos HTTP/1.1" 301 0
+ERROR 2022-07-27 15:37:47,558 basehttp 68162 123145399713792 "GET /promos/ HTTP/1.1" 500 59874
+INFO 2022-07-27 15:40:27,475 autoreload 68162 4412952064 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:40:31,723 autoreload 68252 4565052928 Watching for file changes with StatReloader
+ERROR 2022-07-27 15:40:55,422 basehttp 68252 123145497133056 "GET /promos/ HTTP/1.1" 500 60011
+INFO 2022-07-27 15:41:03,679 autoreload 68252 4565052928 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:41:08,957 autoreload 68283 4544409088 Watching for file changes with StatReloader
+ERROR 2022-07-27 15:41:15,886 basehttp 68283 123145477980160 "GET /promos/ HTTP/1.1" 500 59951
+ERROR 2022-07-27 15:41:22,607 basehttp 68283 123145477980160 "GET /promos/ HTTP/1.1" 500 59814
+INFO 2022-07-27 15:46:20,860 autoreload 68283 4544409088 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:46:25,705 autoreload 68410 4431355392 Watching for file changes with StatReloader
+INFO 2022-07-27 15:47:27,065 autoreload 68410 4431355392 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 15:47:30,807 autoreload 68537 4587785728 Watching for file changes with StatReloader
+INFO 2022-07-27 15:48:09,849 autoreload 68537 4587785728 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:48:14,369 autoreload 68609 4377169408 Watching for file changes with StatReloader
+INFO 2022-07-27 15:50:00,989 autoreload 68609 4377169408 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:50:15,069 autoreload 68648 4459441664 Watching for file changes with StatReloader
+INFO 2022-07-27 15:51:38,295 autoreload 68648 4459441664 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:51:42,925 autoreload 68714 4584828416 Watching for file changes with StatReloader
+INFO 2022-07-27 15:52:51,704 autoreload 68714 4584828416 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:52:57,494 autoreload 68800 4443151872 Watching for file changes with StatReloader
+INFO 2022-07-27 15:53:46,218 autoreload 68869 4403023360 Watching for file changes with StatReloader
+INFO 2022-07-27 15:53:57,100 basehttp 68869 123145390673920 "GET /promos/ HTTP/1.1" 200 15175
+INFO 2022-07-27 15:54:20,283 autoreload 68869 4403023360 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:54:24,137 autoreload 68901 4609936896 Watching for file changes with StatReloader
+INFO 2022-07-27 15:54:50,357 autoreload 68930 4483108352 Watching for file changes with StatReloader
+INFO 2022-07-27 15:56:32,215 autoreload 68930 4483108352 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:56:36,220 autoreload 69054 4534484480 Watching for file changes with StatReloader
+INFO 2022-07-27 15:57:29,105 autoreload 69054 4534484480 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:57:33,687 autoreload 69136 4520443392 Watching for file changes with StatReloader
+INFO 2022-07-27 15:58:18,022 autoreload 69136 4520443392 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:58:21,709 autoreload 69232 4554329600 Watching for file changes with StatReloader
+INFO 2022-07-27 15:58:33,189 autoreload 69232 4554329600 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:58:36,513 autoreload 69252 4392558080 Watching for file changes with StatReloader
+INFO 2022-07-27 15:59:13,631 autoreload 69252 4392558080 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:59:17,182 autoreload 69284 4615491072 Watching for file changes with StatReloader
+INFO 2022-07-27 15:59:22,268 autoreload 69284 4615491072 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:59:26,282 autoreload 69303 4547894784 Watching for file changes with StatReloader
+INFO 2022-07-27 15:59:48,113 autoreload 69303 4547894784 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 15:59:51,316 autoreload 69324 4579974656 Watching for file changes with StatReloader
+INFO 2022-07-27 16:00:16,582 autoreload 69341 4403678720 Watching for file changes with StatReloader
+INFO 2022-07-27 16:00:41,544 autoreload 69341 4403678720 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:00:44,763 autoreload 69360 4466085376 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:00:55,983 basehttp 69360 123145603137536 "GET /promos/ HTTP/1.1" 500 87477
+INFO 2022-07-27 16:01:55,110 autoreload 69360 4466085376 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:01:59,128 autoreload 69395 4751486464 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:02:08,944 basehttp 69395 123145392590848 "GET /promos/ HTTP/1.1" 500 90452
+INFO 2022-07-27 16:02:25,439 autoreload 69395 4751486464 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:02:28,752 autoreload 69421 4491910656 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:02:41,657 basehttp 69421 123145464283136 "GET /promos/ HTTP/1.1" 500 90452
+INFO 2022-07-27 16:02:57,946 autoreload 69421 4491910656 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:03:02,561 autoreload 69443 4695789056 Watching for file changes with StatReloader
+INFO 2022-07-27 16:03:04,700 basehttp 69443 123145560662016 "GET /promos/ HTTP/1.1" 200 14026
+INFO 2022-07-27 16:03:12,858 autoreload 69443 4695789056 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:03:17,809 autoreload 69465 4494843392 Watching for file changes with StatReloader
+INFO 2022-07-27 16:03:30,680 autoreload 69465 4494843392 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:03:34,043 autoreload 69490 4355087872 Watching for file changes with StatReloader
+INFO 2022-07-27 16:03:42,693 autoreload 69490 4355087872 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:03:47,515 autoreload 69506 4381175296 Watching for file changes with StatReloader
+INFO 2022-07-27 16:03:50,654 basehttp 69506 123145602019328 "GET /promos/ HTTP/1.1" 200 14026
+INFO 2022-07-27 16:05:35,176 autoreload 69506 4381175296 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:05:39,647 autoreload 69569 4791569920 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:05:48,381 basehttp 69569 123145378402304 "GET /promos/ HTTP/1.1" 500 110937
+INFO 2022-07-27 16:06:12,784 autoreload 69569 4791569920 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:06:17,289 autoreload 69590 4699639296 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:06:24,828 basehttp 69590 123145561186304 "GET /promos/ HTTP/1.1" 500 110937
+INFO 2022-07-27 16:06:47,786 autoreload 69590 4699639296 /Users/mizza/Desarrollo/python/servMed/glimpx/apps/promotions/api/api.py changed, reloading.
+INFO 2022-07-27 16:06:52,505 autoreload 69621 4490870272 Watching for file changes with StatReloader
+INFO 2022-07-27 16:07:01,326 autoreload 69621 4490870272 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 16:07:06,285 autoreload 69662 4555476480 Watching for file changes with StatReloader
+INFO 2022-07-27 16:10:18,649 autoreload 69718 4528872960 Watching for file changes with StatReloader
+INFO 2022-07-27 16:10:27,102 autoreload 69718 4528872960 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 16:10:30,609 autoreload 69730 4396326400 Watching for file changes with StatReloader
+INFO 2022-07-27 16:10:36,222 basehttp 69730 123145524912128 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 16:10:36,283 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:11:00,924 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:13:40,078 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:15:45,421 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:16:18,385 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:17:37,105 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:19:21,655 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:19:44,873 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:19:48,402 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:19:53,453 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:20:05,322 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:20:20,580 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:21:05,604 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:21:54,076 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:22:36,066 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:24:09,362 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:24:29,644 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:24:29,890 basehttp 69730 123145558491136 "GET /media/promos/Imagen_2.png HTTP/1.1" 304 0
+INFO 2022-07-27 16:24:29,919 basehttp 69730 123145541701632 "GET /media/promos/Imagen_1.png HTTP/1.1" 200 1857893
+INFO 2022-07-27 16:26:09,400 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:26:32,336 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:29:42,218 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:31:09,077 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:31:42,986 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:32:03,988 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:32:24,821 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:32:58,929 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:33:16,546 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:33:43,253 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:34:11,667 basehttp 69730 123145524912128 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 16:37:24,229 autoreload 69730 4396326400 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 16:37:29,129 autoreload 70462 4544712192 Watching for file changes with StatReloader
+WARNING 2022-07-27 16:37:31,291 basehttp 70462 123145388367872 "GET / HTTP/1.1" 404 3334
+INFO 2022-07-27 16:48:27,753 basehttp 70462 123145388367872 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 16:49:17,832 basehttp 70462 123145388367872 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 16:49:32,629 basehttp 70462 123145388367872 "POST /login/ HTTP/1.1" 201 216
+INFO 2022-07-27 16:57:42,912 autoreload 70462 4544712192 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 16:57:47,046 autoreload 71271 4586749440 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:57:58,993 basehttp 71271 123145412775936 "GET / HTTP/1.1" 500 78652
+INFO 2022-07-27 16:58:36,036 autoreload 71271 4586749440 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 16:58:39,497 autoreload 71311 4412120576 Watching for file changes with StatReloader
+ERROR 2022-07-27 16:58:52,689 basehttp 71311 123145495793664 "GET / HTTP/1.1" 500 78633
+INFO 2022-07-27 16:59:08,633 autoreload 71311 4412120576 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 16:59:12,757 autoreload 71337 4586450432 Watching for file changes with StatReloader
+INFO 2022-07-27 16:59:15,694 basehttp 71337 123145484619776 "GET / HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:15,954 basehttp 71337 123145518198784 "GET /css/vendor.d35aa242.css HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:15,962 basehttp 71337 123145501409280 "GET /js/app.1b66988e.js HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:15,971 basehttp 71337 123145534988288 "GET /css/app.31d6cfe0.css HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:16,003 basehttp 71337 123145484619776 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:16,372 basehttp 71337 123145484619776 "GET /icons/favicon-32x32.png HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:16,392 basehttp 71337 123145484619776 "GET /icons/favicon-16x16.png HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:16,400 basehttp 71337 123145484619776 "GET /icons/favicon-96x96.png HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:16,408 basehttp 71337 123145484619776 "GET /icons/favicon-128x128.png HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:19,257 basehttp 71337 123145484619776 "GET /css/vendor.d35aa242.css HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:19,271 basehttp 71337 123145534988288 "GET /css/app.31d6cfe0.css HTTP/1.1" 200 926
+INFO 2022-07-27 16:59:34,935 basehttp 71337 123145551777792 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:00:24,327 autoreload 71337 4586450432 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 17:00:27,809 autoreload 71410 4589522432 Watching for file changes with StatReloader
+INFO 2022-07-27 17:00:30,498 basehttp 71410 123145337520128 "GET / HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:30,556 basehttp 71410 123145337520128 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:30,561 basehttp 71410 123145354309632 "GET /js/app.1b66988e.js HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:30,566 basehttp 71410 123145371099136 "GET /css/vendor.d35aa242.css HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:30,565 basehttp 71410 123145387888640 "GET /css/app.31d6cfe0.css HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:31,097 basehttp 71410 123145387888640 "GET /icons/favicon-32x32.png HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:31,118 basehttp 71410 123145387888640 "GET /icons/favicon-16x16.png HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:31,128 basehttp 71410 123145387888640 "GET /icons/favicon-96x96.png HTTP/1.1" 200 926
+INFO 2022-07-27 17:00:31,138 basehttp 71410 123145387888640 "GET /icons/favicon-128x128.png HTTP/1.1" 200 926
+INFO 2022-07-27 17:03:49,457 basehttp 71410 123145387888640 "GET / HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:49,542 basehttp 71410 123145387888640 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:49,566 basehttp 71410 123145371099136 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:50,059 basehttp 71410 123145371099136 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:50,079 basehttp 71410 123145371099136 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:50,092 basehttp 71410 123145371099136 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:03:50,115 basehttp 71410 123145371099136 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,127 basehttp 71410 123145371099136 "GET / HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,208 basehttp 71410 123145371099136 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,212 basehttp 71410 123145387888640 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,595 basehttp 71410 123145387888640 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,616 basehttp 71410 123145387888640 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,625 basehttp 71410 123145387888640 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:00,633 basehttp 71410 123145387888640 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:08:47,058 basehttp 71410 123145387888640 "GET / HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,129 basehttp 71410 123145387888640 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,149 basehttp 71410 123145371099136 "GET /js/app.1b66988e.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,519 basehttp 71410 123145371099136 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,538 basehttp 71410 123145371099136 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,571 basehttp 71410 123145371099136 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:47,597 basehttp 71410 123145371099136 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,328 basehttp 71410 123145371099136 "GET / HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,384 basehttp 71410 123145387888640 "GET /js/app.1b66988e.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,394 basehttp 71410 123145371099136 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,740 basehttp 71410 123145371099136 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,769 basehttp 71410 123145371099136 "GET / HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,836 basehttp 71410 123145387888640 "GET /js/app.1b66988e.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,839 basehttp 71410 123145371099136 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:49,904 basehttp 71410 123145371099136 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,146 basehttp 71410 123145371099136 "GET / HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,249 basehttp 71410 123145387888640 "GET /js/app.1b66988e.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,251 basehttp 71410 123145371099136 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,746 basehttp 71410 123145371099136 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,770 basehttp 71410 123145371099136 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,779 basehttp 71410 123145371099136 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:08:50,796 basehttp 71410 123145371099136 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1115
+INFO 2022-07-27 17:18:41,761 basehttp 71410 123145337520128 "GET / HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:41,976 basehttp 71410 123145354309632 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:41,979 basehttp 71410 123145337520128 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,165 basehttp 71410 123145354309632 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,167 basehttp 71410 123145337520128 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,655 basehttp 71410 123145337520128 "GET /favicon.ico HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,664 basehttp 71410 123145337520128 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,673 basehttp 71410 123145337520128 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,681 basehttp 71410 123145337520128 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:42,688 basehttp 71410 123145337520128 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,278 basehttp 71410 123145337520128 "GET / HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,343 basehttp 71410 123145337520128 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,350 basehttp 71410 123145354309632 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,375 basehttp 71410 123145354309632 "GET /js/vendor.dc71e55a.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,376 basehttp 71410 123145337520128 "GET /js/app.1b66988e.js HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,716 basehttp 71410 123145354309632 "GET /favicon.ico HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,735 basehttp 71410 123145354309632 "GET /icons/favicon-32x32.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,744 basehttp 71410 123145354309632 "GET /icons/favicon-16x16.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,754 basehttp 71410 123145354309632 "GET /icons/favicon-96x96.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:18:51,771 basehttp 71410 123145354309632 "GET /icons/favicon-128x128.png HTTP/1.1" 200 1125
+INFO 2022-07-27 17:21:09,780 autoreload 71410 4589522432 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/urls.py changed, reloading.
+INFO 2022-07-27 17:21:14,462 autoreload 71827 4740681216 Watching for file changes with StatReloader
+WARNING 2022-07-27 17:50:00,960 basehttp 71827 123145395372032 "GET /spa HTTP/1.1" 404 3361
+WARNING 2022-07-27 17:50:01,611 basehttp 71827 123145395372032 "GET /favicon.ico HTTP/1.1" 404 3385
+INFO 2022-07-27 17:50:08,687 basehttp 71827 123145428951040 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:50:27,263 autoreload 71827 4740681216 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 17:50:32,220 autoreload 72436 4660305408 Watching for file changes with StatReloader
+INFO 2022-07-27 17:50:57,774 autoreload 72436 4660305408 /Users/mizza/Desarrollo/python/servMed/glimpx/glimpx/settings.py changed, reloading.
+INFO 2022-07-27 17:51:01,512 autoreload 72452 4410293760 Watching for file changes with StatReloader
+INFO 2022-07-27 17:51:04,111 basehttp 72452 123145541046272 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:04,473 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 17:51:04,606 basehttp 72452 123145557835776 "GET /media/promos/Imagen_2.png HTTP/1.1" 304 0
+INFO 2022-07-27 17:51:04,607 basehttp 72452 123145574625280 "GET /media/promos/Imagen_1.png HTTP/1.1" 304 0
+INFO 2022-07-27 17:51:26,683 basehttp 72452 123145541046272 "POST /login/ HTTP/1.1" 201 216
+INFO 2022-07-27 17:51:26,904 basehttp 72452 123145574625280 "GET /media/perfil/IMG_20220609_120207.jpg HTTP/1.1" 200 2174352
+INFO 2022-07-27 17:51:26,923 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 17:51:30,469 basehttp 72452 123145541046272 "OPTIONS /anamnesis/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:30,879 basehttp 72452 123145541046272 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 17:51:31,631 basehttp 72452 123145541046272 "OPTIONS /anamnesis/1/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:31,699 basehttp 72452 123145541046272 "GET /anamnesis/1/ HTTP/1.1" 200 939
+INFO 2022-07-27 17:51:36,424 basehttp 72452 123145541046272 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2022-07-27 17:51:36,512 basehttp 72452 123145541046272 "GET /users/ HTTP/1.1" 400 43
+INFO 2022-07-27 17:51:36,648 basehttp 72452 123145541046272 "POST /refresh-token/ HTTP/1.1" 200 52
+INFO 2022-07-27 17:51:36,710 basehttp 72452 123145541046272 "OPTIONS / HTTP/1.1" 200 0
+WARNING 2022-07-27 17:51:36,849 basehttp 72452 123145541046272 "GET / HTTP/1.1" 404 3334
+INFO 2022-07-27 17:51:39,688 basehttp 72452 123145541046272 "GET /users/ HTTP/1.1" 200 360
+INFO 2022-07-27 17:51:41,638 basehttp 72452 123145541046272 "OPTIONS /users/4/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:41,776 basehttp 72452 123145541046272 "GET /users/4/ HTTP/1.1" 200 379
+INFO 2022-07-27 17:51:44,340 basehttp 72452 123145541046272 "GET /users/ HTTP/1.1" 200 360
+INFO 2022-07-27 17:51:49,672 basehttp 72452 123145541046272 "OPTIONS /users/undefined/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:54,019 basehttp 72452 123145591414784 "GET /users/ HTTP/1.1" 200 360
+ERROR 2022-07-27 17:51:55,411 basehttp 72452 123145541046272 "GET /users/undefined/ HTTP/1.1" 500 162476
+INFO 2022-07-27 17:51:58,157 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 17:51:59,247 basehttp 72452 123145541046272 "OPTIONS /promotions/2/ HTTP/1.1" 200 0
+INFO 2022-07-27 17:51:59,330 basehttp 72452 123145541046272 "GET /promotions/2/ HTTP/1.1" 200 110
+INFO 2022-07-27 17:52:01,496 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 17:52:04,458 basehttp 72452 123145541046272 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 17:52:10,379 basehttp 72452 123145541046272 "POST /logout/ HTTP/1.1" 200 77
+INFO 2022-07-27 17:52:19,192 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 17:52:29,648 basehttp 72452 123145541046272 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:19:48,078 autoreload 72691 4707868160 Watching for file changes with StatReloader
+INFO 2022-07-27 20:19:51,524 basehttp 72691 123145520037888 "OPTIONS /promotions/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:19:51,564 basehttp 72691 123145520037888 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:19:51,618 basehttp 72691 123145536827392 "GET /media/promos/Imagen_1.png HTTP/1.1" 304 0
+INFO 2022-07-27 20:19:51,618 basehttp 72691 123145553616896 "GET /media/promos/Imagen_2.png HTTP/1.1" 304 0
+INFO 2022-07-27 20:20:14,408 basehttp 72691 123145520037888 "POST /login/ HTTP/1.1" 201 216
+INFO 2022-07-27 20:20:14,549 basehttp 72691 123145520037888 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:20:22,883 basehttp 72691 123145520037888 "OPTIONS /anamnesis/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:20:23,031 basehttp 72691 123145520037888 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 20:20:24,727 basehttp 72691 123145520037888 "OPTIONS /anamnesis/2/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:20:24,853 basehttp 72691 123145520037888 "GET /anamnesis/2/ HTTP/1.1" 200 773
+INFO 2022-07-27 20:20:48,915 basehttp 72691 123145520037888 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 20:20:50,312 basehttp 72691 123145520037888 "OPTIONS /anamnesis/1/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:20:50,454 basehttp 72691 123145520037888 "GET /anamnesis/1/ HTTP/1.1" 200 939
+INFO 2022-07-27 20:21:19,676 basehttp 72691 123145520037888 "OPTIONS /materials/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:21:19,830 basehttp 72691 123145520037888 "GET /materials/ HTTP/1.1" 200 113
+INFO 2022-07-27 20:21:21,549 basehttp 72691 123145520037888 "OPTIONS /materials/1/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:21:21,589 basehttp 72691 123145520037888 "GET /materials/1/ HTTP/1.1" 200 74
+INFO 2022-07-27 20:21:25,970 basehttp 72691 123145520037888 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2022-07-27 20:21:26,005 basehttp 72691 123145520037888 "GET /users/ HTTP/1.1" 400 43
+INFO 2022-07-27 20:21:26,086 basehttp 72691 123145520037888 "POST /refresh-token/ HTTP/1.1" 200 52
+INFO 2022-07-27 20:21:26,131 basehttp 72691 123145520037888 "OPTIONS / HTTP/1.1" 200 0
+WARNING 2022-07-27 20:21:26,173 basehttp 72691 123145520037888 "GET / HTTP/1.1" 404 3334
+INFO 2022-07-27 20:21:32,272 basehttp 72691 123145520037888 "GET /users/ HTTP/1.1" 200 360
+INFO 2022-07-27 20:21:36,578 basehttp 72691 123145520037888 "GET /materials/ HTTP/1.1" 200 113
+INFO 2022-07-27 20:21:37,774 basehttp 72691 123145520037888 "GET /materials/1/ HTTP/1.1" 200 74
+INFO 2022-07-27 20:21:42,550 basehttp 72691 123145520037888 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 20:21:43,271 basehttp 72691 123145520037888 "GET /anamnesis/1/ HTTP/1.1" 200 939
+INFO 2022-07-27 20:21:43,856 basehttp 72691 123145520037888 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 20:21:57,598 basehttp 72691 123145520037888 "GET /users/ HTTP/1.1" 200 360
+INFO 2022-07-27 20:22:03,650 basehttp 72691 123145520037888 "GET /anamnesis/ HTTP/1.1" 200 1715
+INFO 2022-07-27 20:22:19,621 basehttp 72691 123145520037888 "GET /anamnesis/1/ HTTP/1.1" 200 939
+INFO 2022-07-27 20:22:58,796 basehttp 72691 123145520037888 "OPTIONS /physicalExm/5/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:22:59,038 basehttp 72691 123145520037888 "PUT /physicalExm/5/ HTTP/1.1" 200 47
+INFO 2022-07-27 20:23:16,616 basehttp 72691 123145520037888 "OPTIONS /users/1/ HTTP/1.1" 200 0
+INFO 2022-07-27 20:23:16,700 basehttp 72691 123145520037888 "GET /users/1/ HTTP/1.1" 200 462
+INFO 2022-07-27 20:24:22,213 basehttp 72691 123145520037888 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:24:23,132 basehttp 72691 123145553616896 "GET /media/promos/Imagen_1.png HTTP/1.1" 200 1857893
+INFO 2022-07-27 20:24:23,246 basehttp 72691 123145553616896 "GET /media/promos/Imagen_2.png HTTP/1.1" 200 1280423
+INFO 2022-07-27 20:26:28,359 basehttp 72691 123145520037888 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:26:32,322 basehttp 72691 123145520037888 "GET /promotions/ HTTP/1.1" 200 407
+INFO 2022-07-27 20:26:35,274 basehttp 72691 123145520037888 "POST /logout/ HTTP/1.1" 200 77

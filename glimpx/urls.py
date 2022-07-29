@@ -3,7 +3,11 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.views.static import serve
 from apps.users.views import Login, Logout, UserToken
+from django.views.generic import TemplateView
+
+
 urlpatterns = [
+    # re_path('', TemplateView.as_view(template_name="index.html")),
     path('admin/', admin.site.urls),
     path('login/', Login.as_view(), name = 'login'),
     path('refresh-token/', UserToken.as_view(), name = 'refresh-token'),
