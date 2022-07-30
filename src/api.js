@@ -17,7 +17,7 @@ function getToken() {
       console.error(error);
     });
 }
-function get(url, params) {
+function get(url) {
   Loading.show({
     spinner: QSpinnerBars,
     spinnerColor: "positive",
@@ -70,6 +70,160 @@ function get(url, params) {
       return error;
     });
 }
+
+function put(url, params) {
+  Loading.show({
+    spinner: QSpinnerBars,
+    spinnerColor: "positive",
+    message: "Cargando...",
+  });
+  return api
+    .put(url, params, {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    })
+    .then((res) => {
+      Loading.hide();
+      return res;
+    })
+    .catch((error) => {
+      Loading.hide();
+      if (error.response.data.expired == true) {
+        getToken();
+      }
+      if (error.message == "Network Error") {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message:
+            "No se pudo conectar con el servidor, revisa tu conexión a internet o intentalo de nuevo mas tarde",
+        });
+      } else if (error.response.status >= 400) {
+        if (error.response.status === 401) {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: error.response,
+          });
+        } else {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: "Ocurrió un error desconocido",
+          });
+        }
+      } else {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message: "El servidor envió una respuesta inválida",
+        });
+      }
+      return error;
+    });
+}
+
+function post(url, params) {
+  return api
+    .post(url, params, {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    })
+    .then((res) => {
+      Loading.hide();
+      return Promise.resolve(res);
+    })
+    .catch((error) => {
+      Loading.hide();
+      if (error.response.data.expired == true) {
+        getToken();
+      }
+      if (error.message == "Network Error") {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message:
+            "No se pudo conectar con el servidor, revisa tu conexión a internet o intentalo de nuevo mas tarde",
+        });
+      } else if (error.response.status >= 400) {
+        if (error.response.status === 401) {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: error.response,
+          });
+        } else {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: "Ocurrió un error desconocido",
+          });
+        }
+        console.log(error.message + " " + error.response.data.message + "");
+      } else {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message: "El servidor envió una respuesta inválida",
+        });
+      }
+      return error;
+    });
+}
+
+function del(url, params) {
+  return api
+    .delete(url, params, {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    })
+    .then((res) => {
+      Loading.hide();
+      return res;
+    })
+    .catch((error) => {
+      Loading.hide();
+      if (error.response.data.expired == true) {
+        getToken();
+      }
+      if (error.message == "Network Error") {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message:
+            "No se pudo conectar con el servidor, revisa tu conexión a internet o intentalo de nuevo mas tarde",
+        });
+      } else if (error.response.status >= 400) {
+        if (error.response.status === 401) {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: error.response,
+          });
+        } else {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: "Ocurrió un error desconocido",
+          });
+        }
+        console.log(error.message + " " + error.response.data.message + "");
+      } else {
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message: "El servidor envió una respuesta inválida",
+        });
+      }
+      return error;
+    });
+}
 export default {
   get,
+  post,
+  put,
+  del,
 };

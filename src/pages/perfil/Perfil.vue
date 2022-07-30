@@ -21,7 +21,7 @@
                       <img v-if="user.avatar" :src="user.avatar" :alt="user.name" />
                       <figcaption>
                         <p>
-                          <q-file borderless v-model="image" accept=".jpg, image/*" @change="onFilePicked">
+                          <q-file borderless v-model="image" accept=".jpg, image/*" @change="onFilePicked()">
                             <q-avatar icon="add_a_photo" color="secondary" text-color="white" />
                           </q-file>
                         </p>
@@ -89,7 +89,6 @@
         </q-card>
       </div>
     </div>
-    <q-btn @click="setAdmin()" flat v-show="enb">ADM</q-btn>
   </q-page>
 </template>
 
@@ -111,6 +110,8 @@ export default defineComponent({
       user: {
         name: "",
         email: "",
+        username: "",
+        image: "",
         currentPass: "",
         newPass: "",
         confirmPass: "",
@@ -129,6 +130,8 @@ export default defineComponent({
         let user = res.data
         this.user.name = user.name;
         this.user.email = user.email;
+        this.user.image = user.image;
+        this.user.username = user.username
       });
     },
     getUser() {
@@ -198,13 +201,14 @@ export default defineComponent({
     },
 
     updateUser() {
+      let user = JSON.parse(sessionStorage.getItem("user"));
       let formData = new FormData();
-      let userID = sessionStorage.getItem("userId");
-      formData.append("id", userID);
       formData.append("name", this.user.name);
+      formData.append("username", this.user.username);
       formData.append("email", this.user.email);
+      formData.append("image", this.user.image);
       try {
-        this.putProfile(formData);
+        api.put(`users/${user.id}/`, formData);
         this.edit = true;
       } catch (error) {
         console.error(error);
@@ -243,21 +247,20 @@ export default defineComponent({
           fr.readAsDataURL(files[0]);
           fr.addEventListener("load", () => {
             this.imageFile = files[0];
-            let userID = sessionStorage.getItem("userId");
-            let formData = new FormData();
-            formData.append("imagen", this.imageFile);
-            formData.append("id", userID);
             try {
-              this.postUsuarioImage(formData).then(() => {
-                this.fetchusuarioId(userID).then(() => {
-                  let urlsplit = localStorage
-                    .getItem("auth_url")
-                    .split("/api/")[0];
-                  const res =
-                    this.$store.getters["configuracion/getterUsuarioId"];
-                  this.user.avatar = urlsplit + "/images/users/" + res[0].image;
-                });
-              });
+              let user = JSON.parse(sessionStorage.getItem("user"));
+              let formData = new FormData();
+              formData.append("name", this.user.name);
+              formData.append("username", this.user.username);
+              formData.append("email", this.user.email);
+              formData.append("image", this.imageFile);
+              try {
+                api.put(`users/${user.id}/`, formData);
+                this.edit = true;
+                this.getUser()
+              } catch (error) {
+                console.error(error);
+              }
             } catch (error) {
               console.error(error);
             }
@@ -265,17 +268,6 @@ export default defineComponent({
         }
       } else {
         this.image = "";
-      }
-    },
-
-    setAdmin() {
-      let formData = new FormData;
-      formData.append("id", sessionStorage.getItem("userId"));
-      formData.append("roleName", 'Admin');
-      try {
-        this.$store.dispatch("permisos/assignRole", formData);
-      } catch (error) {
-        console.error(error);
       }
     },
   },

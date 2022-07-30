@@ -1,14 +1,15 @@
+
 <template>
   <q-page padding>
     <q-toolbar inset>
       <q-breadcrumbs active-color="positive" style="font-size: 15px">
-        <q-breadcrumbs-el icon="inventory_2" to="users" label="Usuarios" class="text-green" />
+        <q-breadcrumbs-el icon="inventory_2" label="Anamnesis" class="text-green" />
       </q-breadcrumbs>
     </q-toolbar>
     <div class="q-pa-md">
-      <q-table :grid="$q.screen.xs" title="Usuarios" :rows="rows" :columns="columns" row-key="id" :filter="filter">
+      <q-table :grid="$q.screen.xs" title="Anamnesis" :rows="rows" :columns="columns" row-key="id" :filter="filter">
         <template v-slot:top-right>
-          <q-btn flat color="green-6" icon-right="add" label="Crear" @click="go_tonew" />
+          <q-btn flat color="green-6" icon-right="add" label="Crear" to="ManageAnamnesis" />
           <q-input borderless dense debounce="300" v-model="filter" placeholder="Search">
             <template v-slot:append>
               <q-icon name="search" />
@@ -27,19 +28,13 @@
           </div>
         </template>
         <template v-slot:body="props">
-          <q-tr clickable :props="props" @click="go_todetalle(props.row.id)">
-            <q-td key="name" :props="props">
-              {{ props.row.name }}
+          <q-tr clickable :props="props" @click="goToDetalle(props.row.id)">
+            <q-td key="username" :props="props">
+              {{ props.row.username }}
             </q-td>
 
-            <q-td key="email" :props="props">
-              {{ props.row.email }}
-            </q-td>
-            <q-td key="created_at" :props="props">
-              {{ props.row.created_at }}
-            </q-td>
-            <q-td key="state" :props="props">
-              {{ props.row.state }}
+            <q-td key="modified_date" :props="props">
+              {{ props.row.modified_date }}
             </q-td>
           </q-tr>
         </template>
@@ -53,24 +48,24 @@ import { ref } from "vue";
 import { Notify } from "quasar";
 import api from "src/api";
 export default {
-  name: "usuariosPage",
+  name: "anamnesisPage",
   data() {
     return {
       filter: ref(""),
       columns: [
         {
-          name: "name",
-          field: "name",
+          name: "username",
+          field: "username",
           required: true,
           label: "Nombre",
           align: "left",
           sortable: true,
         },
         {
-          name: "email",
+          name: "modified_date",
           align: "center",
-          label: "Correo",
-          field: "email",
+          label: "Ultima modificación",
+          field: "modified_date",
           sortable: true,
         },
 
@@ -86,24 +81,36 @@ export default {
   },
   methods: {
     getUsuarios() {
-      api.get("users/").then((res) => { this.rows = res.data })
+      api.get("anamnesis/").then((res) => { this.rows = res.data })
         .catch((error) => {
           console.error(error)
         })
     },
 
+    async goToDetalle(id) {
 
-    go_todetalle(id) {
-      this.$router.push({
-        name: 'user',
-        params: { id: id },
-      });
-    },
-    go_tonew(id) {
-      this.$router.push({
-        name: "user",
-        params: { id: 0, action: "new" },
-      });
+      try {
+        let res = await api.get(`anamnesis/${id}/`)
+        sessionStorage.setItem("data", JSON.stringify(res.data))
+        if (sessionStorage.getItem("data")) {
+          this.$router.push({
+            name: 'anamnesisDetail',
+          });
+        } else {
+          Notify.create({
+            type: "negative",
+            position: "top-right",
+            message: "Ocurrió un error inesperado, intenta otra vez.",
+          });
+        }
+      } catch (error) {
+        console.error(error)
+        Notify.create({
+          type: "negative",
+          position: "top-right",
+          message: "Ocurrió un error inesperado, intenta otra vez.",
+        });
+      }
     },
   },
 };

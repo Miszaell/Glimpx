@@ -2,7 +2,7 @@
   <div class="q-pa-md q-gutter-sm">
     <q-page-container class="GPL__page-container">
       <div class="flex flex-center q-mt-xl">
-        <div style="min-width: 600px">
+        <div style="min-width: 650px">
           <q-tabs v-model="tab" align="justify" narrow-indicator class="q-mb-lg">
             <q-tab class="text-purple" name="contactus" :label="$t('main.contactForm')" />
             <q-tab class="text-orange" name="contactinf" :label="$t('main.contactInfo')" />

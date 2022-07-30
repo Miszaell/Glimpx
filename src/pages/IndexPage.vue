@@ -24,6 +24,7 @@
 
               <q-card-actions>
                 <q-btn flat round icon="event" />
+                <q-btn flat> 7:00PM </q-btn>
                 <q-btn flat> 7:30PM </q-btn>
                 <q-btn flat color="primary"> Reserve </q-btn>
               </q-card-actions>
@@ -92,45 +93,50 @@
           </div>
         </div>
         <div class="col-3 shadow-1 q-pa-md q-mx-xs flex flex-center bg-white">
-          <q-card class="my-card" flat>
-            <q-card-section horizontal>
-              <q-img class="col" src="https://cdn.quasar.dev/img/parallax2.jpg" />
+          <div v-for="item in row" :key="item">
+            <q-card class="my-card" flat>
+              <q-card-section horizontal>
+                <q-carousel class="col" swipeable animated v-model="slide" thumbnails infinite>
+                  <q-carousel-slide v-for="i in item.file_content" :key="i" :name="i.id" :img-src="i.media" />
 
-              <q-card-actions vertical class="justify-around">
-                <q-btn flat round color="red" icon="favorite" />
-                <q-btn flat round color="accent" icon="bookmark" />
-                <q-btn flat round color="primary" icon="share" />
+                </q-carousel>
+                <q-card-actions vertical class="justify-around">
+                  <q-btn flat round color="red" icon="favorite" />
+                  <q-btn flat round color="accent" icon="bookmark" />
+                  <q-btn flat round color="primary" icon="share" />
+                </q-card-actions>
+              </q-card-section>
+            </q-card>
+            <q-card class="my-card q-ma-sm" flat>
+              <q-item>
+                <q-item-section avatar>
+                  <q-avatar>
+                    <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+                  </q-avatar>
+                </q-item-section>
+
+                <q-item-section>
+                  <q-item-label>{{ item.title }}</q-item-label>
+                </q-item-section>
+              </q-item>
+
+              <q-separator />
+
+              <q-card-section horizontal>
+                <q-card-section>
+                  {{ item.description }}
+                </q-card-section>
+
+              </q-card-section>
+              <q-separator />
+
+              <q-card-actions>
+                <q-btn flat icon="event">
+                  {{ item.startTime }} | {{ item.endTime }}
+                </q-btn>
               </q-card-actions>
-            </q-card-section>
-          </q-card>
-          <q-card class="my-card q-ma-sm" flat>
-            <q-item>
-              <q-item-section avatar>
-                <q-avatar>
-                  <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-                </q-avatar>
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>Title</q-item-label>
-                <q-item-label caption> Subhead </q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-separator />
-
-            <q-card-section horizontal>
-              <q-card-section>
-                {{ lorem }}
-              </q-card-section>
-
-              <q-separator vertical />
-
-              <q-card-section class="col-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </q-card-section>
-            </q-card-section>
-          </q-card>
+            </q-card>
+          </div>
           <q-card class="my-card q-ma-sm" flat>
             <q-card-section horizontal>
               <q-card-section class="q-pt-xs">
@@ -152,7 +158,7 @@
             <q-card-actions>
               <q-btn flat round icon="event" />
               <q-btn flat> 7:30PM </q-btn>
-              <q-btn flat color="primary"> Reserve </q-btn>
+              <q-btn flat> 7:00PM </q-btn>
             </q-card-actions>
           </q-card>
         </div>
@@ -162,12 +168,33 @@
 </template>
 
 <script>
+import api from 'src/api';
+import { ref } from 'vue';
 export default {
   setup() {
     return {
+      slide: ref(1),
+      fullscreen: ref(false),
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
+  },
+  data() {
+    return {
+      row: [],
+    }
+  },
+  created() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      api.get("promotions/").then((res) => {
+        this.row = res.data.rows
+
+        console.log(this.row);
+      })
+    }
   },
 };
 </script>

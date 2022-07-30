@@ -3,6 +3,9 @@
     <q-header elevated class="bg-white text-grey-8" height-hint="64">
       <q-toolbar class="GPL__toolbar" style="height: 64px">
         <q-toolbar-title v-if="$q.screen.gt.sm" shrink class="row items-center no-wrap">
+          <q-avatar size="45px">
+            <q-img src="icons/favicon-128x128.png"></q-img>
+          </q-avatar>
           <span class="q-ml-sm cursor-pointer" @click="$router.push('/')">{{ $t("main.appTitle") }}</span>
         </q-toolbar-title>
 
@@ -73,6 +76,9 @@
       </q-item>
       <q-item clickable to="mapa">
         <q-item-section>Mapa</q-item-section>
+      </q-item>
+      <q-item clickable to="aviso">
+        <q-item-section>Aviso de privacidad</q-item-section>
       </q-item>
     </q-footer>
   </q-layout>

@@ -5,6 +5,9 @@
         <q-btn flat dense round @click="toggleLeftDrawer" aria-label="Menu" icon="menu" class="q-mx-md" />
 
         <q-toolbar-title v-if="$q.screen.gt.sm" shrink class="row items-center no-wrap">
+          <q-avatar size="45px">
+            <q-img src="icons/favicon-128x128.png"></q-img>
+          </q-avatar>
           <span class="q-ml-sm">{{ $t("main.appTitle") }}</span>
         </q-toolbar-title>
 
@@ -56,10 +59,6 @@
             </q-list>
           </q-menu>
         </q-btn>
-
-        <q-btn v-if="$q.screen.gt.xs" flat dense no-wrap color="primary" icon="cloud_upload" no-caps label="Upload"
-          class="q-ml-sm q-px-md" />
-
         <q-space />
 
         <div class="q-gutter-sm row items-center no-wrap">
@@ -103,17 +102,20 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" bordered behavior="mobile" @click="leftDrawerOpen = false">
-      <q-scroll-area class="fit">
+      <q-scroll-area class="fit q-ml-md">
         <q-toolbar class="GPL__toolbar">
           <q-toolbar-title class="row items-center text-grey-8">
+            <q-avatar size="45px">
+              <q-img src="icons/favicon-128x128.png"></q-img>
+            </q-avatar>
             <span class="q-ml-sm">{{ $t("main.appTitle") }}</span>
           </q-toolbar-title>
         </q-toolbar>
 
         <q-list padding>
-          <q-item v-for="link in links1" :key="link.text" clickable class="GPL__drawer-item" :to="link.url">
+          <q-item v-for="link in links1" :key="link.text" clickable :to="link.url">
             <q-item-section avatar>
-              <q-icon :name="link.icon" />
+              <q-icon :name="link.icon" :color="link.color" />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{
@@ -124,7 +126,7 @@
 
           <q-separator class="q-my-md" />
 
-          <q-item v-for="link in links2" :key="link.text" clickable class="GPL__drawer-item">
+          <q-item v-for="link in links2" :key="link.text" clickable>
             <q-item-section avatar>
               <q-icon :name="link.icon" />
             </q-item-section>
@@ -141,6 +143,17 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-footer bordered class="bg-white text-black flex flex-center">
+      <q-item clickable to="contacto">
+        <q-item-section>Contacto</q-item-section>
+      </q-item>
+      <q-item clickable to="mapa">
+        <q-item-section>Mapa</q-item-section>
+      </q-item>
+      <q-item clickable to="aviso">
+        <q-item-section>Aviso de privacidad</q-item-section>
+      </q-item>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -150,7 +163,7 @@ import { Notify } from "quasar";
 const stringOptions = ["hlPromotions"];
 
 export default {
-  name: "GooglePhotosLayout",
+  name: "AdminLayout",
 
   setup() {
     const filteredOptions = ref([]);
@@ -206,10 +219,11 @@ export default {
       toggleLeftDrawer,
 
       links1: [
-        { icon: "people", text: "users", url: "users" },
-        { icon: "inventory", text: "stock", url: "stock" },
-        { icon: "health_and_safety", text: "hlPromotions", url: "usehlPromotionsrs" },
-        { icon: "medication", text: "consult", url: "consult" },
+        { icon: "people", text: "users", url: "users", color: "primary" },
+        { icon: "inventory", text: "stock", url: "stock", color: "accent" },
+        { icon: "health_and_safety", text: "hlPromotions", url: "promotions", color: "warning" },
+        { icon: "medication", text: "consult", url: "emergency", color: "negative" },
+        { icon: "medical_information", text: "anamnesis", url: "anamnesis", color: "secondary" },
       ],
       links2: [
         { icon: "settings", text: "settings" },

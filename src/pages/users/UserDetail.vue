@@ -154,41 +154,6 @@ export default {
     return {
       dialogPass: false,
       dialogImage: false,
-      track_visibility: ["name", "email", "state", "role"],
-      commits: [],
-      commitspre: [],
-      add_comment: "",
-      columns: [
-        {
-          name: "name",
-          field: "name",
-          required: true,
-          label: "Nombre",
-          align: "left",
-          sortable: true,
-        },
-        {
-          name: "email",
-          align: "center",
-          label: "email",
-          field: "email",
-          sortable: true,
-        },
-        {
-          name: "created_at",
-          align: "center",
-          label: "Creado el",
-          field: "created_at",
-          sortable: true,
-        },
-        {
-          name: "state",
-          align: "center",
-          label: "Estado",
-          field: "state",
-          sortable: true,
-        },
-      ],
       row: [],
       rows: [],
       rowspre: [],
@@ -304,18 +269,13 @@ export default {
       }
     },
     saveNew() {
-      let token = sessionStorage.getItem("token")
       let formData = new FormData();
       formData.append("name", this.row.name);
       formData.append("username", this.row.username);
       formData.append("last_name", this.row.last_name);
       formData.append("email", this.row.email);
       formData.append("password", this.password);
-      this.$api.post(`users/`, formData, {
-        headers: {
-          Authorization: `Token ${token}`,
-        }
-      })
+      api.post(`users/`, formData)
         .then((response) => {
           if (response.status == 201) {
             this.$router.push({
@@ -332,18 +292,13 @@ export default {
         });
     },
     save() {
-      let token = sessionStorage.getItem("token")
       let formData = new FormData();
       formData.append("name", this.row.name);
       formData.append("username", this.row.username);
-      formData.append("last_name", this.row.last_name);
       formData.append("email", this.row.email);
+      formData.append("image", this.row.image);
 
-      this.$api.put(`users/${this.$route.params.id}/`, formData, {
-        headers: {
-          Authorization: `Token ${token}`,
-        }
-      })
+      api.put(`users/${this.$route.params.id}/`, formData)
         .then((response) => {
           this.edit = true;
           this.saveput = true;
@@ -363,12 +318,7 @@ export default {
         });
     },
     deleteUser() {
-      let token = sessionStorage.getItem("token")
-      this.$api.delete(`users/${this.$route.params.id}/`, {
-        headers: {
-          Authorization: `Token ${token}`,
-        }
-      })
+      api.del(`users/${this.$route.params.id}/`)
         .then((res) => {
           this.$router.push({
             path: "/users",
@@ -385,17 +335,13 @@ export default {
     createOn() {
       this.savepost = false;
       this.rowspre = this.rows;
-      this.commitspre = this.commits;
       this.row = {
         id: "",
         name: "",
         email: "",
         tipo: "",
         state: "open",
-        r_object: "",
-        user_id: sessionStorage.getItem("userId"),
       };
-      this.commits = [];
       this.edit = false;
       this.saveput = true;
     },
@@ -407,10 +353,8 @@ export default {
       } else {
         if (this.rowspre) {
           this.row = this.rowspre;
-          this.commits = this.commitspre;
         } else if (this.rowspre) {
           this.rowspre = this.row;
-          this.commitspre = this.commits;
         }
         this.edit = true;
         this.savepost = true;
@@ -419,7 +363,6 @@ export default {
     },
     updateOn() {
       this.rowspre = this.row;
-      this.commitspre = this.commits;
       this.edit = false;
       this.saveput = false;
     },
