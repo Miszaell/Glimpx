@@ -120,13 +120,13 @@ const routes = [
     path: "/auth",
     name: "auth",
     component: () => import("src/pages/Auth.vue"),
-    beforeEnter: (to, from, next) => {
-      if (sessionStorage.getItem("token")) {
-        next("/admin");
-      } else {
-        next();
-      }
-    },
+    // beforeEnter: (to, from, next) => {
+    //   if (sessionStorage.getItem("token")) {
+    //     next("/admin");
+    //   } else {
+    //     next();
+    //   }
+    // },
   },
 
   // Always leave this as last one,

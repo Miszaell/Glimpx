@@ -35,22 +35,22 @@ export default route(function (/* { store, ssrContext } */) {
     ),
   });
 
-  Router.beforeEach((to, from, next) => {
-    if (to.matched.some((record) => record.meta.requiresAuth)) {
-      if (
-        sessionStorage.getItem("user") === null ||
-        sessionStorage.getItem("token") === null
-      ) {
-        next({
-          path: "/auth",
-        });
-      } else {
-        next();
-      }
-    } else {
-      next();
-    }
-  });
+  // Router.beforeEach((to, from, next) => {
+  //   if (to.matched.some((record) => record.meta.requiresAuth)) {
+  //     if (
+  //       sessionStorage.getItem("user") === null ||
+  //       sessionStorage.getItem("token") === null
+  //     ) {
+  //       next({
+  //         path: "/auth",
+  //       });
+  //     } else {
+  //       next();
+  //     }
+  //   } else {
+  //     next();
+  //   }
+  // });
 
   return Router;
 });
